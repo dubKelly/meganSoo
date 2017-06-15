@@ -1,7 +1,6 @@
 (function landFocus() {
+	var landFocus = document.getElementsByClassName("landFocus");
 	document.onmousemove = function mouseX(event) {
-		console.log(event.clientX);
-		var landFocus = document.getElementsByClassName("landFocus");
 		for (var i = landFocus.length - 1; i >= 0; i--) {
 			if (event.clientX < (window.innerWidth / 3)) {
 				landFocus[0].classList.add("focus");

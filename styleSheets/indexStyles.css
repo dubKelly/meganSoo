@@ -82,7 +82,7 @@ html, body {
 }
 .motion {
 	top: 50%;
-	left: calc(50% - 64px);
+	left: calc(50% - 54px);
 }
 .part {
 	position: absolute;
@@ -90,14 +90,14 @@ html, body {
 	width: 1px;
 	top: 50%;
 	left: 50%;
-	transform: translate(-50%, -50%);
+	transform: translate(-50%, -50%) rotate(20deg);
 	background-color: #c70039;
 	cursor: default;
 	transition: all .8s;
 }
 .stills {
 	top: 50%;
-	right: calc(50% - 72px);
+	right: calc(50% - 62px);
 }
 .landFade {
 	opacity: 0;
@@ -121,10 +121,10 @@ html, body {
 	opacity: 0.2;
 }
 .part.mFocus {
-	left: calc(50% + 300px);
+	transform: translate(300px, -50%) rotate(0deg);
 }
 .part.sFocus {
-	left: calc(50% - 300px);
+	transform: translate(-300px, -50%) rotate(0deg);
 }
 .landFade.focus {
 	opacity: 1;
