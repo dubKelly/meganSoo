@@ -1,0 +1,131 @@
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*_*/
+
+html, body {
+	height: 100%;
+	font-family: "Raleway", sans-serif;
+}
+.container {
+	height: 100%;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.5);
+}
+
+/*** landing ***/
+
+.landing {
+	height: 100%;
+	width: 100%;
+	background-image: url(https://s-media-cache-ak0.pinimg.com/originals/ae/1d/6e/ae1d6ef744320d237a95fc1e7d6ee98b.jpg);
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+}
+.motion, .stills {
+	position: absolute;
+	display: inline-block;
+	font-size: 48px;
+	text-transform: uppercase;
+	letter-spacing: 20px;
+	color: white;
+	transform: translate(0, -50%);
+	cursor: default;
+	transition: all .8s;
+}
+.motion {
+	top: 50%;
+	left: calc(50% - 64px);
+}
+.part {
+	position: absolute;
+	height: 120px;
+	width: 1px;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	background-color: #c70039;
+	cursor: default;
+	transition: all .8s;
+}
+.stills {
+	top: 50%;
+	right: calc(50% - 72px);
+}
+.landFade {
+	opacity: 0;
+	transition: all .8s;
+}
+
+/* onMouseMove */
+
+.motion.focus {
+	transform: translate(-25%, -50%);
+}
+.stills.focus {
+	transform: translate(25%, -50%);
+}
+.motion.outFocus {
+	transform: translate(-300px, -50%);
+	opacity: 0.2;
+}
+.stills.outFocus {
+	transform: translate(300px, -50%);
+	opacity: 0.2;
+}
+.part.mFocus {
+	left: calc(50% + 300px);
+}
+.part.sFocus {
+	left: calc(50% - 300px);
+}
+.landFade.focus {
+	opacity: 1;
+}
