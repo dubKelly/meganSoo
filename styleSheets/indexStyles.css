@@ -100,7 +100,7 @@ html, body {
 	right: calc(50% - 62px);
 }
 .landFade {
-	opacity: 0;
+	color: rgba(250, 250, 250, 0);
 	transition: all .8s;
 }
 
@@ -127,5 +127,5 @@ html, body {
 	transform: translate(-300px, -50%) rotate(0deg);
 }
 .landFade.focus {
-	opacity: 1;
+	color: rgba(250, 250, 250, 1);
 }
