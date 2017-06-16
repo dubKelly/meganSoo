@@ -111,7 +111,7 @@ html, body {
 	transition: all .8s;
 }
 .fM, .lS {
-	opacity: 0;
+	opacity: 1;
 }
 .fName {
 	animation: fNameLoad 2.5s ease-out;
@@ -189,6 +189,9 @@ html, body {
 		font-weight: 100;
 		transform: skew(0deg);
 		animation: none;
+	}
+	.fM, .lS {
+		opacity: 0;
 	}
 	.deskHover {
 		position: absolute;
