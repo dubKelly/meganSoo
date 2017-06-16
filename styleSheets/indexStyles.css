@@ -57,6 +57,15 @@ html, body {
 	height: 100%;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
+	animation: fadeIn 3s ease-in-out;
+}
+@keyframes fadeIn {
+	0% {
+		background-color: rgba(0, 0, 0, 1);
+	}
+	100% {
+		background-color: rgba(0, 0, 0, 0.5);
+	}
 }
 
 /*** landing ***/
@@ -69,63 +78,141 @@ html, body {
 	background-position: center;
 	background-repeat: no-repeat;
 }
-.motion, .stills {
+.landFocus {
+	display: none;
+}
+.lNameCont, .fNameCont {
 	position: absolute;
+	top: 50%;
+	height: 50px;
+	overflow: hidden;
+}
+.fNameCont {
+	right: calc(50% - 70px);
+	transform: translateY(-100%) skew(-30deg);
+	width: 290px;
+}
+.lNameCont {
+	left: calc(50% + 44px);
+	transform: skew(-30deg);
+	width: 176px;
+}
+.fName, .lName {
 	display: inline-block;
+	position: absolute;
+	left: 15px;
+	transform: skew(30deg);
 	font-size: 48px;
 	text-transform: uppercase;
 	letter-spacing: 20px;
 	color: white;
-	transform: translate(0, -50%);
 	cursor: default;
-	transition: all .8s;
 }
-.motion {
-	top: 50%;
-	left: calc(50% - 54px);
+.fName {
+	animation: fNameLoad 4s ease-out;
+}
+@keyframes fNameLoad {
+	0% {
+		left: 305px;
+	}
+	75% {
+		left: 305px;
+		opacity: 0.1;
+	}
+	100% {
+		left: 15px;
+	}
+}
+.lName {
+	animation: lNameLoad 4s ease-out;
+}
+@keyframes lNameLoad {
+	0% {
+		left: -206px;
+	}
+	75% {
+		left: -206px;
+		opacity: 0.1;
+	}
+	100% {
+		left: 15px;
+	}
 }
 .part {
+	display: inline-block;
 	position: absolute;
 	height: 120px;
-	width: 1px;
+	width: 2px;
 	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%) rotate(20deg);
+	left: calc(50% + 57px);
+	transform: translate(-50%, -50%) rotate(30deg);
 	background-color: #c70039;
 	cursor: default;
 	transition: all .8s;
+	animation: partLoad 3s ease-out;
 }
-.stills {
-	top: 50%;
-	right: calc(50% - 62px);
-}
-.landFade {
-	color: rgba(250, 250, 250, 0);
-	transition: all .8s;
+@keyframes partLoad {
+	0% {
+		height: 0px;
+	}
+	66% {
+		height: 0px;
+		opacity: 0.5
+	}
+	90% {
+		height: 120px;
+	}
 }
 
-/* onMouseMove */
 
-.motion.focus {
-	transform: translate(-25%, -50%);
-}
-.stills.focus {
-	transform: translate(25%, -50%);
-}
-.motion.outFocus {
-	transform: translate(-300px, -50%);
-	opacity: 0.2;
-}
-.stills.outFocus {
-	transform: translate(300px, -50%);
-	opacity: 0.2;
-}
-.part.mFocus {
-	transform: translate(300px, -50%) rotate(0deg);
-}
-.part.sFocus {
-	transform: translate(-300px, -50%) rotate(0deg);
-}
-.landFade.focus {
-	color: rgba(250, 250, 250, 1);
+@media only screen and (min-width: 1370px) {
+	.motion, .stills {
+		display: inline-block;
+		position: absolute;
+		font-size: 48px;
+		text-transform: uppercase;
+		letter-spacing: 20px;
+		color: white;
+		transform: translate(0, -50%);
+		cursor: default;
+		transition: all .8s;
+	}
+	.motion {
+		top: 50%;
+		left: calc(50% - 54px);
+	}
+	.stills {
+		top: 50%;
+		right: calc(50% - 62px);
+	}
+	.landFade {
+		color: rgba(250, 250, 250, 0);
+		transition: all .8s;
+	}
+
+	/* onMouseMove */
+
+	.motion.focus {
+		transform: translate(-25%, -50%);
+	}
+	.stills.focus {
+		transform: translate(25%, -50%);
+	}
+	.motion.outFocus {
+		transform: translate(-300px, -50%);
+		opacity: 0.2;
+	}
+	.stills.outFocus {
+		transform: translate(300px, -50%);
+		opacity: 0.2;
+	}
+	.part.mFocus {
+		transform: translate(300px, -50%) rotate(0deg);
+	}
+	.part.sFocus {
+		transform: translate(-300px, -50%) rotate(0deg);
+	}
+	.landFade.focus {
+		color: rgba(250, 250, 250, 1);
+	}
 }
