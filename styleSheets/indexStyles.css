@@ -57,7 +57,7 @@ html, body {
 	height: 100%;
 	width: 100%;
 	background-color: rgba(0, 0, 0, 0.5);
-	animation: fadeIn 3s ease-in-out;
+	animation: fadeIn 2.5s ease-in-out;
 }
 @keyframes fadeIn {
 	0% {
@@ -86,6 +86,7 @@ html, body {
 	top: 50%;
 	height: 50px;
 	overflow: hidden;
+	transition: all .8s;
 }
 .fNameCont {
 	right: calc(50% - 70px);
@@ -107,15 +108,19 @@ html, body {
 	letter-spacing: 20px;
 	color: white;
 	cursor: default;
+	transition: all .8s;
+}
+.fM, .lS {
+	opacity: 0;
 }
 .fName {
-	animation: fNameLoad 4s ease-out;
+	animation: fNameLoad 2.5s ease-out;
 }
 @keyframes fNameLoad {
 	0% {
 		left: 305px;
 	}
-	75% {
+	50% {
 		left: 305px;
 		opacity: 0.1;
 	}
@@ -124,13 +129,13 @@ html, body {
 	}
 }
 .lName {
-	animation: lNameLoad 4s ease-out;
+	animation: lNameLoad 2.5s ease-out;
 }
 @keyframes lNameLoad {
 	0% {
 		left: -206px;
 	}
-	75% {
+	50% {
 		left: -206px;
 		opacity: 0.1;
 	}
@@ -141,7 +146,7 @@ html, body {
 .part {
 	display: inline-block;
 	position: absolute;
-	height: 120px;
+	height: 160px;
 	width: 2px;
 	top: 50%;
 	left: calc(50% + 57px);
@@ -149,13 +154,98 @@ html, body {
 	background-color: #c70039;
 	cursor: default;
 	transition: all .8s;
-	animation: partLoad 3s ease-out;
+	animation: partLoad 2s ease-out;
 }
 @keyframes partLoad {
 	0% {
 		height: 0px;
 	}
-	66% {
+	50% {
+		height: 0px;
+		opacity: 0.5
+	}
+	80% {
+		height: 160px;
+	}
+}
+
+
+@media only screen and (min-width: 1370px) {
+	.landFocus {
+		display: inline-block;
+		font-weight: 100;
+	}
+	.fNameCont {
+		transform: translateY(-50%);
+		left: calc(50% - 69px);
+		transition: all .8s;
+	}
+	.lNameCont {
+		transform: translateY(-50%);
+		left: calc(50% - 2px);
+	}
+	.fName, .lName {
+		opacity: 0;
+		font-weight: 100;
+		transform: skew(0deg);
+		animation: none;
+	}
+	.deskHover {
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		height: 120px;
+		width: 120px;
+		transform: translate(-50%, -50%);
+		z-index: 2;
+	}
+	.motion, .stills {
+		display: inline-block;
+		position: absolute;
+		top: 50%;
+		font-size: 48px;
+		text-transform: uppercase;
+		letter-spacing: 20px;
+		color: white;
+		transform: translateY(-50%);
+		cursor: default;
+		transition: visibility 0s, opacity .8s, transform .8s;
+	}
+	.motion {
+		left: calc(50% - 54px);
+		animation: deskLoad 3s ease-in-out;
+	}
+	.stills {
+		right: calc(50% - 62px);
+		animation: deskLoad 3s ease-in-out;
+	}
+	@keyframes deskLoad {
+		0% {
+			opacity: 0;
+		}
+		33% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+	.landFade {
+		color: rgba(250, 250, 250, 0);
+		transition: all .8s;
+	}
+	.part {
+		left: 50%;
+		transform: translateY(-50%) rotate(15deg);
+		height: 120px;
+		width: 1px;
+		animation: partLoad 2s ease-in-out;
+	}
+	@keyframes partLoad {
+	0% {
+		height: 0px;
+	}
+	50% {
 		height: 0px;
 		opacity: 0.5
 	}
@@ -163,33 +253,6 @@ html, body {
 		height: 120px;
 	}
 }
-
-
-@media only screen and (min-width: 1370px) {
-	.motion, .stills {
-		display: inline-block;
-		position: absolute;
-		font-size: 48px;
-		text-transform: uppercase;
-		letter-spacing: 20px;
-		color: white;
-		transform: translate(0, -50%);
-		cursor: default;
-		transition: all .8s;
-	}
-	.motion {
-		top: 50%;
-		left: calc(50% - 54px);
-	}
-	.stills {
-		top: 50%;
-		right: calc(50% - 62px);
-	}
-	.landFade {
-		color: rgba(250, 250, 250, 0);
-		transition: all .8s;
-	}
-
 	/* onMouseMove */
 
 	.motion.focus {
@@ -215,4 +278,30 @@ html, body {
 	.landFade.focus {
 		color: rgba(250, 250, 250, 1);
 	}
-}
+
+	/* deskHead.onHover */
+
+	.deskHover.hvr {
+		width: 500px;
+	}
+	.motion.hvr {
+		transform: translate(-165px, -50%);
+	}
+	.stills.hvr {
+		transform: translate(+50px, -50%);
+	}
+/*	.fM.hvr, .lS.hrv {
+		opacity: 1;
+	}*/
+	.fName.hvr, .lName.hvr {
+		opacity: 1;
+	}
+	.fNameCont.hvr {
+		transform: translate(-165px, -50%);
+	}
+	.lNameCont.hvr {
+		transform: translate(+50px, -50%);
+	}
+	.part.hvr {
+		transform: translate(+50px, -50%) rotate(15deg);
+	}
