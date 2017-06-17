@@ -106,7 +106,7 @@ html, body {
 	font-size: 48px;
 	text-transform: uppercase;
 	letter-spacing: 20px;
-	color: white;
+	color: rgba(250, 250, 250, 1);
 	cursor: default;
 	transition: all .8s;
 }
@@ -122,10 +122,11 @@ html, body {
 	}
 	50% {
 		left: 305px;
-		opacity: 0.1;
-	}
+		color: rgba(250, 250, 250, 0.1);
+		}
 	100% {
 		left: 15px;
+		color: rgba(250, 250, 250, 1);
 	}
 }
 .lName {
@@ -137,10 +138,11 @@ html, body {
 	}
 	50% {
 		left: -206px;
-		opacity: 0.1;
+		color: rgba(250, 250, 250, 0.1);
 	}
 	100% {
 		left: 15px;
+		color: rgba(250, 250, 250, 1);
 	}
 }
 .part {
@@ -151,7 +153,7 @@ html, body {
 	top: 50%;
 	left: calc(50% + 57px);
 	transform: translate(-50%, -50%) rotate(30deg);
-	background-color: #c70039;
+	background-color: rgba(199, 0, 57, 1);
 	cursor: default;
 	transition: all .8s;
 	animation: partLoad 2s ease-out;
@@ -162,10 +164,11 @@ html, body {
 	}
 	50% {
 		height: 0px;
-		opacity: 0.5
+		background-color: rgba(199, 0, 57, 0.5);
 	}
 	80% {
 		height: 160px;
+		background-color: rgba(199, 0, 57, 1);
 	}
 }
 
@@ -185,13 +188,13 @@ html, body {
 		left: calc(50% - 2px);
 	}
 	.fName, .lName {
-		opacity: 0;
+		color: rgba(250, 250, 250, 0);
 		font-weight: 100;
 		transform: skew(0deg);
 		animation: none;
 	}
 	.fM, .lS {
-		opacity: 0;
+		color: rgba(250, 250, 250, 0);
 	}
 	.deskHover {
 		position: absolute;
@@ -209,10 +212,10 @@ html, body {
 		font-size: 48px;
 		text-transform: uppercase;
 		letter-spacing: 20px;
-		color: white;
+		color: rgba(250, 250, 250, 1);
 		transform: translateY(-50%);
 		cursor: default;
-		transition: visibility 0s, opacity .8s, transform .8s;
+		transition: all .8s;
 	}
 	.motion {
 		left: calc(50% - 54px);
@@ -224,13 +227,13 @@ html, body {
 	}
 	@keyframes deskLoad {
 		0% {
-			opacity: 0;
+			color: rgba(250, 250, 250, 0);
 		}
 		33% {
-			opacity: 0;
+			color: rgba(250, 250, 250, 0);
 		}
 		100% {
-			opacity: 1;
+			color: rgba(250, 250, 250, 1);
 		}
 	}
 	.landFade {
@@ -250,10 +253,11 @@ html, body {
 	}
 	50% {
 		height: 0px;
-		opacity: 0.5
+		background-color: rgba(199, 0, 57, 0.5);
 	}
 	90% {
 		height: 120px;
+		background-color: rgba(199, 0, 57, 1);
 	}
 }
 	/* onMouseMove */
@@ -266,11 +270,11 @@ html, body {
 	}
 	.motion.outFocus {
 		transform: translate(-300px, -50%);
-		opacity: 0.2;
+		color: rgba(250, 250, 250, 0.2);
 	}
 	.stills.outFocus {
 		transform: translate(300px, -50%);
-		opacity: 0.2;
+		color: rgba(250, 250, 250, 0.2);
 	}
 	.part.mFocus {
 		transform: translate(300px, -50%) rotate(0deg);
@@ -293,11 +297,8 @@ html, body {
 	.stills.hvr {
 		transform: translate(+50px, -50%);
 	}
-/*	.fM.hvr, .lS.hrv {
-		opacity: 1;
-	}*/
 	.fName.hvr, .lName.hvr {
-		opacity: 1;
+		color: rgba(250, 250, 250, 1);
 	}
 	.fNameCont.hvr {
 		transform: translate(-165px, -50%);
