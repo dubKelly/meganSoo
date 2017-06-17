@@ -289,23 +289,23 @@ html, body {
 	/* deskHead.onHover */
 
 	.deskHover.hvr {
-		width: 500px;
+		width: 420px;
 	}
 	.motion.hvr {
-		transform: translate(-165px, -50%);
+		transform: translate(-159px, -50%);
 	}
 	.stills.hvr {
-		transform: translate(+50px, -50%);
+		transform: translate(+56px, -50%);
 	}
 	.fName.hvr, .lName.hvr {
 		color: rgba(250, 250, 250, 1);
 	}
 	.fNameCont.hvr {
-		transform: translate(-165px, -50%);
+		transform: translate(-159px, -50%);
 	}
 	.lNameCont.hvr {
-		transform: translate(+50px, -50%);
+		transform: translate(+56px, -50%);
 	}
 	.part.hvr {
-		transform: translate(+50px, -50%) rotate(15deg);
+		transform: translate(+56px, -50%) rotate(15deg);
 	}
