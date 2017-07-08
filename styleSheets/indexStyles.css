@@ -177,29 +177,40 @@ html, body {
 .about {
 	position: relative;
 	width: 100%;
-	height: 700px;
-	min-height: 50%;
+	height: 900px;
+	min-height: 66%;
 }
 .content {
 	position: absolute;
 	top: 50%;
 	left: 50%;
 	transform: translate(-50%, -50%);
-	font-size: 150%;
+	font-size: 175%;
 	width: 66%;
 	text-align: center;
 }
 .pageTitle {
 	margin: 40px 0 40px 0;
-	font-size: 36px;
+	font-size: 48px;
 	text-transform: uppercase;
-	letter-spacing: 18px;
+	letter-spacing: 20px;
 }
 .p {
 	margin: 40px 0 40px 0;
 	line-height: 1.5;
 }
 
+@media only screen and (min-width: 600px) {
+	.about {
+		height: 400px;
+	}
+	.content {
+		font-size: 100%;
+	}
+	.pageTitle {
+		font-size: 28px;
+	}
+}
 
 @media only screen and (min-width: 1370px) {
 	.landFocus {
