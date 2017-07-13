@@ -1,12 +1,10 @@
 /* _landing */
+@import "mixins";
 
 .landing {
 	height: 100%;
 	width: 100%;
-	background-image: url("../../images/Megan Soo - 004.jpg");
-	background-position: center;
-	background-size: cover;
-	background-repeat: no-repeat;
+	@include background-image("../../images/Megan Soo - 004.jpg");
 }
 .landCont {
 	height: 100%;
