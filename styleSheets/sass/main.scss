@@ -1,0 +1,11 @@
+@import "reset";
+
+/*_*/
+
+html, body {
+	height: 100%;
+	font-family: "Raleway", sans-serif;
+}
+
+@import "landing";
+@import "landingAnimations";
