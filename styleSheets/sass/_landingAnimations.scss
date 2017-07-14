@@ -10,26 +10,32 @@
 }
 @keyframes fNameLoad {
 	0% {
+		-webkit-transform: translateX(110%) skew(30deg);
 		transform: translateX(110%) skew(30deg);
 	}
 	50% {
+		-webkit-transform: translateX(110%) skew(30deg);
 		transform: translateX(110%) skew(30deg);
 		color: rgba(250, 250, 250, 0.1);
 		}
 	100% {
+		-webkit-transform: translateX(0) skew(30deg);
 		transform: translateX(0) skew(30deg);
 		color: rgba(250, 250, 250, 1);
 	}
 }
 @keyframes lNameLoad {
 	0% {
+		-webkit-transform: translateX(-110%) skew(30deg);
 		transform: translateX(-110%) skew(30deg);
 	}
 	50% {
+		-webkit-transform: translateX(-110%) skew(30deg);
 		transform: translateX(-110%) skew(30deg);
 		color: rgba(250, 250, 250, 0.1);
 	}
 	100% {
+		-webkit-transform: translateX(0) skew(30deg);
 		transform: translateX(0) skew(30deg);
 		color: rgba(250, 250, 250, 1);
 	}
