@@ -1,4 +1,5 @@
 /* _landing */
+
 @import "mixins";
 
 .landing {
@@ -20,21 +21,20 @@
 	overflow: hidden;
 }
 .fNameCont {
-	-webkit-transform: translate(-226px, -100%) skew(-30deg);
-	transform: translate(-226px, -100%) skew(-30deg);	
+	@include transform(translate(-226px, -100%) skew(-30deg));	
 }
 .lNameCont {
-	-webkit-transform: translate(45px, 0) skew(-30deg);
-	transform: translate(45px, 0) skew(-30deg);
+	@include transform(translate(45px, 0) skew(-30deg));
 }
-.name {
+.landHead {
 	display: inline-block;
 	font-size: 48px;
 	letter-spacing: 20px;
 	text-transform: uppercase;
 	color: rgba(250, 250, 250, 1);
-	-webkit-transform: skew(30deg);
-	transform: skew(30deg);
+}
+.name {
+	@include transform(skew(30deg));
 }
 .fName {
 	animation: fNameLoad 2.5s ease-out;

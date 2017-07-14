@@ -80,12 +80,14 @@ html, body {
   -webkit-transform: translate(45px, 0) skew(-30deg);
   transform: translate(45px, 0) skew(-30deg); }
 
-.name {
+.landHead {
   display: inline-block;
   font-size: 48px;
   letter-spacing: 20px;
   text-transform: uppercase;
-  color: #fafafa;
+  color: #fafafa; }
+
+.name {
   -webkit-transform: skew(30deg);
   transform: skew(30deg); }
 
@@ -151,7 +153,7 @@ html, body {
     transform: translate(-236px, -50%) skew(-30deg); }
 
   .lNameCont {
-    -webkit-transform: translate(-216px, -50%) skew(-30deg);
+    -webkit-transform: translate(55px, -50%) skew(-30deg);
     transform: translate(55px, -50%) skew(-30deg); }
 
   .name {
@@ -166,6 +168,7 @@ html, body {
       color: #fafafa; } }
   .part {
     height: 120px;
+    -webkit-transform: translate(56px, -50%) rotate(15deg);
     transform: translate(56px, -50%) rotate(15deg); }
 
   @keyframes partLoad {
@@ -176,6 +179,21 @@ html, body {
       background-color: rgba(199, 0, 57, 0); }
     80% {
       height: 120px;
-      background-color: #c70039; } } }
+      background-color: #c70039; } }
+  .portHead {
+    position: absolute;
+    top: 50%;
+    left: 50%; }
+
+  .motion {
+    -webkit-transform: translate(-156px, -50%);
+    transform: translate(-156px, -50%); }
+
+  .stills {
+    -webkit-transform: translate(-146px, -50%);
+    transform: translate(-146px, -50%); }
+
+  .fade {
+    opacity: 0; } }
 
 /*# sourceMappingURL=indexStyles.css.map */
