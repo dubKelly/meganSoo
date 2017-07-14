@@ -31,9 +31,9 @@
 	font-size: 48px;
 	letter-spacing: 20px;
 	text-transform: uppercase;
-	color: rgba(250, 250, 250, 1);
 }
 .name {
+	color: rgba(250, 250, 250, 1);
 	@include transform(skew(30deg));
 }
 .fName {

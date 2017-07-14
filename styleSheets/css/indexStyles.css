@@ -84,10 +84,10 @@ html, body {
   display: inline-block;
   font-size: 48px;
   letter-spacing: 20px;
-  text-transform: uppercase;
-  color: #fafafa; }
+  text-transform: uppercase; }
 
 .name {
+  color: #fafafa;
   -webkit-transform: skew(30deg);
   transform: skew(30deg); }
 
@@ -150,14 +150,29 @@ html, body {
 @media only screen and (min-width: 1370px) {
   .fNameCont {
     -webkit-transform: translate(-236px, -50%) skew(-30deg);
-    transform: translate(-236px, -50%) skew(-30deg); }
+    transform: translate(-236px, -50%) skew(-30deg);
+    transition: all 0.8s ease-in-out; }
 
   .lNameCont {
     -webkit-transform: translate(55px, -50%) skew(-30deg);
-    transform: translate(55px, -50%) skew(-30deg); }
+    transform: translate(55px, -50%) skew(-30deg);
+    transition: all 0.8s ease-in-out; }
 
+  .lNameCont.mFocus {
+    left: calc(66% - 45px); }
+
+  /*	.fade {
+  		color: rgba(250, 250, 250, 1);
+  		transition: all 0.8s ease-in-out;
+  	}
+  	.fade.mFocus, .fade.sFocus {
+  		color: rgba(250, 250, 250, 0);
+  	}*/
   .name {
     animation: nameLoad 3s ease-in-out; }
+
+  .name.mFocus {
+    color: rgba(250, 250, 250, 0.2); }
 
   @keyframes nameLoad {
     0% {
@@ -169,7 +184,13 @@ html, body {
   .part {
     height: 120px;
     -webkit-transform: translate(56px, -50%) rotate(15deg);
-    transform: translate(56px, -50%) rotate(15deg); }
+    transform: translate(56px, -50%) rotate(15deg);
+    transition: all 0.8s ease-in-out; }
+
+  .part.mFocus {
+    left: 66%;
+    -webkit-transform: translate(-50%, -50%) rotate(0deg);
+    transform: translate(-50%, -50%) rotate(0deg); }
 
   @keyframes partLoad {
     0% {
@@ -183,17 +204,23 @@ html, body {
   .portHead {
     position: absolute;
     top: 50%;
-    left: 50%; }
+    left: 50%;
+    color: rgba(250, 250, 250, 0); }
 
   .motion {
     -webkit-transform: translate(-156px, -50%);
-    transform: translate(-156px, -50%); }
+    transform: translate(-156px, -50%);
+    transition: all 0.8s ease-in-out; }
 
   .stills {
     -webkit-transform: translate(-146px, -50%);
-    transform: translate(-146px, -50%); }
+    transform: translate(-146px, -50%);
+    transition: all 0.8s ease-in-out; }
 
-  .fade {
-    opacity: 0; } }
+  .motion.mFocus {
+    color: #fafafa; }
+
+  .stills.sFocus {
+    color: #fafafa; } }
 
 /*# sourceMappingURL=indexStyles.css.map */
