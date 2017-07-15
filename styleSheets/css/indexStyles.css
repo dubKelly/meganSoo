@@ -1,226 +1,54 @@
-/* http://meyerweb.com/eric/tools/css/reset/ 
-   v2.0 | 20110126
-   License: none (public domain)
+/*
+Error: File to import not found or unreadable: reset.
+        on line 1 of sass/main.scss
+
+1: @import "reset";
+2: 
+3: /*_*\/
+4: 
+5: html, body {
+6: 	height: 100%;
+
+Backtrace:
+sass/main.scss:1
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:67:in `rescue in import'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:45:in `import'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:28:in `imported_file'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/import_node.rb:37:in `css_import?'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:314:in `visit_import'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `block in visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `block in with_base'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:115:in `with_frame'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/stack.rb:79:in `with_base'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:162:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `block in visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `map'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:52:in `visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:171:in `block in visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:183:in `with_environment'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:170:in `visit_children'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `block in visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:190:in `visit_root'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/base.rb:36:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:161:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/visitors/perform.rb:10:in `visit'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:36:in `css_tree'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/tree/root_node.rb:29:in `render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:384:in `_render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/engine.rb:301:in `render_with_sourcemap'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:492:in `update_stylesheet'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+/var/lib/gems/2.3.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup,
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline; }
-
-/* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure,
-footer, header, hgroup, menu, nav, section {
-  display: block; }
-
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after,
-q:before, q:after {
-  content: '';
-  content: none; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
-
-/*_*/
-html, body {
-  height: 100%;
-  font-family: "Raleway", sans-serif; }
-
-/* _landing */
-.landing {
-  height: 100%;
-  width: 100%;
-  background-image: url("../../images/Megan Soo - 004.jpg");
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat; }
-
-.landCont {
-  height: 100%;
-  width: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
-  animation: fadeIn 2.5s ease-in-out; }
-
-.nameCont {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  padding-left: 20px;
-  overflow: hidden; }
-
-.fNameCont {
-  -webkit-transform: translate(-226px, -100%) skew(-30deg);
-  transform: translate(-226px, -100%) skew(-30deg); }
-
-.lNameCont {
-  -webkit-transform: translate(45px, 0) skew(-30deg);
-  transform: translate(45px, 0) skew(-30deg); }
-
-.landHead {
-  display: inline-block;
-  font-size: 48px;
-  letter-spacing: 20px;
-  text-transform: uppercase; }
-
-.name {
-  color: #fafafa;
-  -webkit-transform: skew(30deg);
-  transform: skew(30deg); }
-
-.fName {
-  animation: fNameLoad 2.5s ease-out; }
-
-.lName {
-  animation: lNameLoad 2.5s ease-out; }
-
-.part {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  width: 2px;
-  height: 160px;
-  background-color: #c70039;
-  transform: translate(56px, -50%) rotate(30deg);
-  animation: partLoad 2s ease-out; }
-
-/* _landingAnimations */
-@keyframes fadeIn {
-  0% {
-    background-color: black; }
-  100% {
-    background-color: rgba(0, 0, 0, 0.5); } }
-@keyframes fNameLoad {
-  0% {
-    -webkit-transform: translateX(110%) skew(30deg);
-    transform: translateX(110%) skew(30deg); }
-  50% {
-    -webkit-transform: translateX(110%) skew(30deg);
-    transform: translateX(110%) skew(30deg);
-    color: rgba(250, 250, 250, 0.1); }
-  100% {
-    -webkit-transform: translateX(0) skew(30deg);
-    transform: translateX(0) skew(30deg);
-    color: #fafafa; } }
-@keyframes lNameLoad {
-  0% {
-    -webkit-transform: translateX(-110%) skew(30deg);
-    transform: translateX(-110%) skew(30deg); }
-  50% {
-    -webkit-transform: translateX(-110%) skew(30deg);
-    transform: translateX(-110%) skew(30deg);
-    color: rgba(250, 250, 250, 0.1); }
-  100% {
-    -webkit-transform: translateX(0) skew(30deg);
-    transform: translateX(0) skew(30deg);
-    color: #fafafa; } }
-@keyframes partLoad {
-  0% {
-    height: 0px; }
-  50% {
-    height: 0px;
-    background-color: rgba(199, 0, 57, 0.5); }
-  80% {
-    height: 160px;
-    background-color: #c70039; } }
-/* _mediaQueries */
-@media only screen and (min-width: 1370px) {
-  .fNameCont {
-    -webkit-transform: translate(-236px, -50%) skew(-30deg);
-    transform: translate(-236px, -50%) skew(-30deg);
-    transition: all 0.8s ease-in-out; }
-
-  .lNameCont {
-    -webkit-transform: translate(55px, -50%) skew(-30deg);
-    transform: translate(55px, -50%) skew(-30deg);
-    transition: all 0.8s ease-in-out; }
-
-  .lNameCont.mFocus {
-    left: calc(66% - 45px); }
-
-  /*	.fade {
-  		color: rgba(250, 250, 250, 1);
-  		transition: all 0.8s ease-in-out;
-  	}
-  	.fade.mFocus, .fade.sFocus {
-  		color: rgba(250, 250, 250, 0);
-  	}*/
-  .name {
-    animation: nameLoad 3s ease-in-out; }
-
-  .name.mFocus {
-    color: rgba(250, 250, 250, 0.2); }
-
-  @keyframes nameLoad {
-    0% {
-      color: rgba(250, 250, 250, 0); }
-    33% {
-      color: rgba(250, 250, 250, 0); }
-    100% {
-      color: #fafafa; } }
-  .part {
-    height: 120px;
-    -webkit-transform: translate(56px, -50%) rotate(15deg);
-    transform: translate(56px, -50%) rotate(15deg);
-    transition: all 0.8s ease-in-out; }
-
-  .part.mFocus {
-    left: 66%;
-    -webkit-transform: translate(-50%, -50%) rotate(0deg);
-    transform: translate(-50%, -50%) rotate(0deg); }
-
-  @keyframes partLoad {
-    0% {
-      height: 0px; }
-    50% {
-      height: 0px;
-      background-color: rgba(199, 0, 57, 0); }
-    80% {
-      height: 120px;
-      background-color: #c70039; } }
-  .portHead {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    color: rgba(250, 250, 250, 0); }
-
-  .motion {
-    -webkit-transform: translate(-156px, -50%);
-    transform: translate(-156px, -50%);
-    transition: all 0.8s ease-in-out; }
-
-  .stills {
-    -webkit-transform: translate(-146px, -50%);
-    transform: translate(-146px, -50%);
-    transition: all 0.8s ease-in-out; }
-
-  .motion.mFocus {
-    color: #fafafa; }
-
-  .stills.sFocus {
-    color: #fafafa; } }
-
-/*# sourceMappingURL=indexStyles.css.map */
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: File to import not found or unreadable: reset.\A         on line 1 of sass/main.scss\A \A 1: @import \"reset\";\A 2: \A 3: /*_*/\A 4: \A 5: html, body {\A 6: 	height: 100%;"; }
