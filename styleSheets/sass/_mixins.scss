@@ -1,0 +1,10 @@
+@mixin background-image($path) {
+	background-image: url($path);
+	background-position: center;
+	background-size: cover;
+	background-repeat: no-repeat;
+}
+@mixin transform($morph) {
+	-webkit-transform: $morph;
+	transform: $morph;
+}

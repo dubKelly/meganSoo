@@ -1,0 +1,67 @@
+/* _landing */
+
+@import "mixins";
+@import "animations";
+
+.landing {
+	height: 100%;
+	width: 100%;
+	@include background-image("../../images/Megan Soo - 004.jpg");
+}
+.landingCont {
+	/* main.scss >> .sectionCont */
+	background-color: rgba(0, 0, 0, 0.5);
+	animation: fadeIn 2.5s ease-in-out;
+}
+.head {
+	position: relative;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+}
+.headCont {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	padding-left: 10px;
+	overflow: hidden;
+}
+.fNameCont {
+	@include transform(translate(-105px, -100%) skew(-30deg));
+}
+.lNameCont {
+	@include transform(translate(21px, 0) skew(-30deg))
+}
+.stillsCont {
+	@include transform(translate(-120px, 0) skew(-30deg));
+}
+.landingHead {
+	display: inline-block;
+	font-size: 18px;
+	font-weight: 200;
+	letter-spacing: 12px;
+	text-transform: uppercase;
+	color: rgba(250, 250, 250, 1);
+	@include transform(skew(30deg));
+}
+.name {
+}
+.fName {
+	animation: fNameLoad 2.8s ease-out;
+}
+.lName {
+	animation: lNameLoad 2.8s ease-out;
+}
+.part {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 80px;
+	width: 1px;
+	background-color: rgba(199, 0, 57, 1);
+	@include transform(translate(26px, -50%) rotate(30deg));
+	animation: partLoad 2.5s ease-in-out;
+}
+.portHead {
+	display: none;
+}
