@@ -48,7 +48,8 @@ table {
 /*_*/
 html, body {
   height: 100%;
-  font-family: "Raleway", sans-serif; }
+  font-family: "Raleway", sans-serif;
+  overflow-x: hidden; }
 
 .sectionCont {
   height: 100%;
@@ -113,6 +114,14 @@ html, body {
   background-color: rgba(0, 0, 0, 0.5);
   animation: fadeIn 2.5s ease-in-out; }
 
+.burger {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  height: 20px;
+  width: 20px;
+  border: 2px solid red; }
+
 .head {
   position: relative;
   top: 50%;
@@ -125,19 +134,63 @@ html, body {
   top: 50%;
   left: 50%;
   padding-left: 10px;
-  overflow: hidden; }
+  overflow: hidden;
+  transition: all 0.5s 0.2s ease-in-out; }
+
+.headCont.open {
+  transition: all 0.5s ease-in-out; }
 
 .fNameCont {
-  -webkit-transform: translate(-105px, -100%) skew(-30deg);
-  transform: translate(-105px, -100%) skew(-30deg); }
+  -webkit-transform: translate(-104px, -120%) skew(-30deg);
+  transform: translate(-104px, -120%) skew(-30deg); }
+
+.fNameCont.open {
+  -webkit-transform: translate(-137px, -120%) skew(0deg);
+  transform: translate(-137px, -120%) skew(0deg); }
 
 .lNameCont {
-  -webkit-transform: translate(21px, 0) skew(-30deg);
-  transform: translate(21px, 0) skew(-30deg); }
+  -webkit-transform: translate(20px, 20%) skew(-30deg);
+  transform: translate(20px, 20%) skew(-30deg); }
+
+.lNameCont.open {
+  -webkit-transform: translate(0, 20%) skew(0deg);
+  transform: translate(0, 20%) skew(0deg); }
+
+.motionCont {
+  -webkit-transform: translate(-153px, -70%) rotateX(90deg);
+  transform: translate(-153px, -70%) rotateX(90deg);
+  transition: all 0.5s ease-in-out; }
+
+.motionCont.open {
+  -webkit-transform: translate(-154px, -120%) rotateX(0deg);
+  transform: translate(-154px, -120%) rotateX(0deg);
+  transition: all 0.5s 0.2s ease-in-out; }
+
+.aboutCont {
+  -webkit-transform: translate(-116px, 20%) skew(-30deg);
+  transform: translate(-116px, 20%) skew(-30deg); }
+
+.aboutCont.open {
+  -webkit-transform: translate(-133px, 20%) skew(0deg);
+  transform: translate(-133px, 20%) skew(0deg); }
 
 .stillsCont {
-  -webkit-transform: translate(-120px, 0) skew(-30deg);
-  transform: translate(-120px, 0) skew(-30deg); }
+  -webkit-transform: translate(34px, -120%) skew(-30deg);
+  transform: translate(34px, -120%) skew(-30deg); }
+
+.stillsCont.open {
+  -webkit-transform: translate(0, -120%) skew(0deg);
+  transform: translate(0, -120%) skew(0deg); }
+
+.contactCont {
+  -webkit-transform: translate(0, -30%) rotateX(90deg);
+  transform: translate(0, -30%) rotateX(90deg);
+  transition: all 0.5s ease-in-out; }
+
+.contactCont.open {
+  -webkit-transform: translate(0, 20%) rotateX(0deg);
+  transform: translate(0, 20%) rotateX(0deg);
+  transition: all 0.5s 0.2s ease-in-out; }
 
 .landingHead {
   display: inline-block;
@@ -146,14 +199,44 @@ html, body {
   letter-spacing: 12px;
   text-transform: uppercase;
   color: #fafafa;
-  -webkit-transform: skew(30deg);
-  transform: skew(30deg); }
+  transition: all 0.5s 0.2s ease-in-out; }
+
+.landingHead.open {
+  transition: all 0.5s ease-in-out; }
 
 .fName {
+  -webkit-transform: skew(30deg);
+  transform: skew(30deg);
   animation: fNameLoad 2.8s ease-out; }
 
+.fName.open {
+  -webkit-transform: translate(110%, 0) skew(0deg);
+  transform: translate(110%, 0) skew(0deg); }
+
 .lName {
+  -webkit-transform: skew(30deg);
+  transform: skew(30deg);
   animation: lNameLoad 2.8s ease-out; }
+
+.lName.open {
+  -webkit-transform: translate(-110%, 0) skew(0deg);
+  transform: translate(-110%, 0) skew(0deg); }
+
+.about {
+  -webkit-transform: translate(110%, 0) skew(30deg);
+  transform: translate(110%, 0) skew(30deg); }
+
+.about.open {
+  -webkit-transform: translate(0, 0) skew(0deg);
+  transform: translate(0, 0) skew(0deg); }
+
+.stills {
+  -webkit-transform: translate(-110%, 0) skew(30deg);
+  transform: translate(-110%, 0) skew(30deg); }
+
+.stills.open {
+  -webkit-transform: translate(0, 0) skew(0deg);
+  transform: translate(0, 0) skew(0deg); }
 
 .part {
   position: absolute;
@@ -164,7 +247,13 @@ html, body {
   background-color: #c70039;
   -webkit-transform: translate(26px, -50%) rotate(30deg);
   transform: translate(26px, -50%) rotate(30deg);
+  transition: all 0.5s 0.2s ease-in-out;
   animation: partLoad 2.5s ease-in-out; }
+
+.part.open {
+  -webkit-transform: translate(-50%, -50%) rotate(0deg);
+  transform: translate(-50%, -50%) rotate(0deg);
+  transition: all 0.5s ease-in-out; }
 
 .portHead {
   display: none; }
