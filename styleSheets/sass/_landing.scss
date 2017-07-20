@@ -116,6 +116,9 @@
 .stills.open {
 	@include transform(translate(0, 0) skew(0deg));
 }
+.motion:hover, .stills:hover, .about:hover, .contact:hover {
+	font-weight: 200;
+}
 .part {
 	position: absolute;
 	top: 50%;
