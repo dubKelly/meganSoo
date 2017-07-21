@@ -135,21 +135,15 @@ html, body {
   left: 50%;
   padding-left: 10px;
   overflow: hidden;
-  /*	transition: all 0.5s 0.2s ease-in-out;
-  */
+  transition: all 0.5s 0.2s ease-in-out; }
+
+.headCont.open {
   transition: all 0.5s ease-in-out; }
 
-/*.headCont.open {
-	transition: all 0.5s ease-in-out;
-}*/
 .fNameCont {
   -webkit-transform: translate(-104px, -120%) skew(-30deg);
   transform: translate(-104px, -120%) skew(-30deg); }
 
-/*.fNameCont.open {
-	@include transform(translate(-137px, -120%) skew(0deg));
-}
-*/
 .fNameCont.open {
   left: calc(15% - 136px);
   -webkit-transform: translate(0, -120%) skew(0deg);
@@ -159,67 +153,27 @@ html, body {
   -webkit-transform: translate(20px, 20%) skew(-30deg);
   transform: translate(20px, 20%) skew(-30deg); }
 
-/*.lNameCont.open {
-	@include transform(translate(0, 20%) skew(0deg));
-}
-*/
 .lNameCont.open {
   left: 15%;
   -webkit-transform: skew(0deg);
   transform: skew(0deg); }
 
-/*.motionCont {
-	@include transform(translate(-153px, -70%) rotateX(90deg));
-	transition: all 0.5s ease-in-out;
-}
-*/
 .motionCont {
   -webkit-transform: translate(-50%, -390%);
   transform: translate(-50%, -390%); }
 
-/*.motionCont.open {
-	@include transform(translate(-154px, -120%) rotateX(0deg));
-	transition: all 0.5s 0.2s ease-in-out;
-}
-*/
-/*.aboutCont {
-	@include transform(translate(-116px, 20%) skew(-30deg));
-}
-*/
 .aboutCont {
   -webkit-transform: translate(-50%, 70%);
   transform: translate(-50%, 70%); }
 
-/*.aboutCont.open {
-	@include transform(translate(-133px, 20%) skew(0deg));
-}
-*/
-/*.stillsCont {
-	@include transform(translate(34px, -120%) skew(-30deg));
-}
-*/
 .stillsCont {
   -webkit-transform: translate(-50%, -170%);
   transform: translate(-50%, -170%); }
 
-/*.stillsCont.open {
-	@include transform(translate(0, -120%) skew(0deg));
-}
-*/
-/*.contactCont {
-	@include transform(translate(0, -30%) rotateX(90deg));
-	transition: all 0.5s ease-in-out;
-}
-*/
 .contactCont {
   -webkit-transform: translate(-50%, 290%);
   transform: translate(-50%, 290%); }
 
-/*.contactCont.open {
-	@include transform(translate(0, 20%) rotateX(0deg));
-	transition: all 0.5s 0.2s ease-in-out;
-}
-*/
 .landingHead {
   display: inline-block;
   font-size: 18px;
@@ -227,46 +181,34 @@ html, body {
   letter-spacing: 12px;
   text-transform: uppercase;
   color: #fafafa;
-  /*transition: all 0.5s 0.2s ease-in-out;*/
   transition: all 0.5s ease-in-out; }
 
-/*.landingHead.open {
-	transition: all 0.5s ease-in-out;
-}
-*/
 .fName {
   -webkit-transform: skew(30deg);
   transform: skew(30deg);
+  transition: all 0.5s 0.2s ease-in-out;
   animation: fNameLoad 2.8s ease-out; }
 
 .fName.open {
   -webkit-transform: translate(110%, 0) skew(0deg);
-  transform: translate(110%, 0) skew(0deg); }
+  transform: translate(110%, 0) skew(0deg);
+  transition: all 0.5s ease-in-out; }
 
 .lName {
   -webkit-transform: skew(30deg);
   transform: skew(30deg);
+  transition: all 0.5s 0.2s ease-in-out;
   animation: lNameLoad 2.8s ease-out; }
 
 .lName.open {
   -webkit-transform: translate(-110%, 0) skew(0deg);
-  transform: translate(-110%, 0) skew(0deg); }
+  transform: translate(-110%, 0) skew(0deg);
+  transition: all 0.5s ease-in-out; }
 
-/*.about {
-	@include transform(translate(110%, 0) skew(30deg));
-}
-*/
-/*.about.open {
-	@include transform(translate(0, 0) skew(0deg));
-}
-*/
-/*.stills {
-	@include transform(translate(-110%, 0) skew(30deg));
-}
 .stills.open {
-	@include transform(translate(0, 0) skew(0deg));
-}
-*/
+  -webkit-transform: translate(0, 0) skew(0deg);
+  transform: translate(0, 0) skew(0deg); }
+
 .part {
   position: absolute;
   top: 50%;
@@ -276,15 +218,9 @@ html, body {
   background-color: #c70039;
   -webkit-transform: translate(26px, -50%) rotate(30deg);
   transform: translate(26px, -50%) rotate(30deg);
-  /*transition: all 0.5s 0.2s ease-in-out;*/
-  transition: all 0.5s ease-in-out;
+  transition: all 0.5s 0.2s ease-in-out;
   animation: partLoad 2.5s ease-in-out; }
 
-/*.part.open {
-	@include transform(translate(-50%, -50%) rotate(0deg));
-	transition: all 0.5s ease-in-out;
-}
-*/
 .part.open {
   left: 15%;
   height: 120px;
@@ -298,5 +234,86 @@ html, body {
 .portHead.open {
   color: #fafafa;
   transition: all 0.5s 0.2s ease-in-out; }
+
+/* _mainMq */
+@media only screen and (min-width: 500px) {
+  /* _landingMin500 */
+  .headCont {
+    transition: all 0.5s 0.2s ease-in-out; }
+
+  .headCont.open {
+    left: 50%;
+    transition: all 0.5s ease-in-out; }
+
+  .fNameCont.open {
+    /*left: 50%;*/
+    -webkit-transform: translate(-137px, -120%) skew(0deg);
+    transform: translate(-137px, -120%) skew(0deg); }
+
+  .lNameCont.open {
+    /*left: 50%;*/
+    -webkit-transform: translate(0, 20%) skew(0deg);
+    transform: translate(0, 20%) skew(0deg); }
+
+  .motionCont {
+    -webkit-transform: translate(-153px, -70%) rotateX(90deg);
+    transform: translate(-153px, -70%) rotateX(90deg);
+    transition: all 0.5s ease-in-out; }
+
+  .motionCont.open {
+    -webkit-transform: translate(-154px, -120%) rotateX(0deg);
+    transform: translate(-154px, -120%) rotateX(0deg);
+    transition: all 0.5s 0.2s ease-in-out; }
+
+  .aboutCont {
+    -webkit-transform: translate(-116px, 20%) skew(-30deg);
+    transform: translate(-116px, 20%) skew(-30deg); }
+
+  .aboutCont.open {
+    -webkit-transform: translate(-133px, 20%) skew(0deg);
+    transform: translate(-133px, 20%) skew(0deg); }
+
+  .stillsCont {
+    -webkit-transform: translate(34px, -120%) skew(-30deg);
+    transform: translate(34px, -120%) skew(-30deg); }
+
+  .stillsCont.open {
+    -webkit-transform: translate(0, -120%) skew(0deg);
+    transform: translate(0, -120%) skew(0deg); }
+
+  .contactCont {
+    -webkit-transform: translate(0, -30%) rotateX(90deg);
+    transform: translate(0, -30%) rotateX(90deg);
+    transition: all 0.5s ease-in-out; }
+
+  .contactCont.open {
+    -webkit-transform: translate(0, 20%) rotateX(0deg);
+    transform: translate(0, 20%) rotateX(0deg);
+    transition: all 0.5s 0.2s ease-in-out; }
+
+  .landingHead {
+    transition: all 0.5s 0.2s ease-in-out; }
+
+  .landingHead.open {
+    transition: all 0.5s ease-in-out; }
+
+  .about {
+    -webkit-transform: translate(110%, 0) skew(30deg);
+    transform: translate(110%, 0) skew(30deg); }
+
+  .about.open {
+    -webkit-transform: translate(0, 0) skew(0deg);
+    transform: translate(0, 0) skew(0deg); }
+
+  .stills {
+    -webkit-transform: translate(-110%, 0) skew(30deg);
+    transform: translate(-110%, 0) skew(30deg); }
+
+  .part {
+    transition: all 0.5s 0.2s ease-in-out; }
+
+  .part.open {
+    left: 50%;
+    height: 80px; } }
 
 /*# sourceMappingURL=indexStyles.css.map */
