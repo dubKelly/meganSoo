@@ -135,63 +135,82 @@ html, body {
   left: 50%;
   padding-left: 10px;
   overflow: hidden;
-  transition: all 0.5s 0.2s ease-in-out; }
-
-.headCont.open {
+  /*	transition: all 0.5s 0.2s ease-in-out;
+  */
   transition: all 0.5s ease-in-out; }
 
+/*.headCont.open {
+	transition: all 0.5s ease-in-out;
+}
+*/
 .fNameCont {
   -webkit-transform: translate(-104px, -120%) skew(-30deg);
   transform: translate(-104px, -120%) skew(-30deg); }
 
-.fNameCont.open {
-  -webkit-transform: translate(-137px, -120%) skew(0deg);
-  transform: translate(-137px, -120%) skew(0deg); }
-
+/*.fNameCont.open {
+	@include transform(translate(-137px, -120%) skew(0deg));
+}
+*/
 .lNameCont {
   -webkit-transform: translate(20px, 20%) skew(-30deg);
   transform: translate(20px, 20%) skew(-30deg); }
 
-.lNameCont.open {
-  -webkit-transform: translate(0, 20%) skew(0deg);
-  transform: translate(0, 20%) skew(0deg); }
-
+/*.lNameCont.open {
+	@include transform(translate(0, 20%) skew(0deg));
+}
+*/
+/*.motionCont {
+	@include transform(translate(-153px, -70%) rotateX(90deg));
+	transition: all 0.5s ease-in-out;
+}
+*/
 .motionCont {
-  -webkit-transform: translate(-153px, -70%) rotateX(90deg);
-  transform: translate(-153px, -70%) rotateX(90deg);
-  transition: all 0.5s ease-in-out; }
+  -webkit-transform: translate(-50%, -390%);
+  transform: translate(-50%, -390%); }
 
-.motionCont.open {
-  -webkit-transform: translate(-154px, -120%) rotateX(0deg);
-  transform: translate(-154px, -120%) rotateX(0deg);
-  transition: all 0.5s 0.2s ease-in-out; }
-
+/*.motionCont.open {
+	@include transform(translate(-154px, -120%) rotateX(0deg));
+	transition: all 0.5s 0.2s ease-in-out;
+}
+*/
+/*.aboutCont {
+	@include transform(translate(-116px, 20%) skew(-30deg));
+}
+*/
 .aboutCont {
-  -webkit-transform: translate(-116px, 20%) skew(-30deg);
-  transform: translate(-116px, 20%) skew(-30deg); }
+  -webkit-transform: translate(-50%, -170%);
+  transform: translate(-50%, -170%); }
 
-.aboutCont.open {
-  -webkit-transform: translate(-133px, 20%) skew(0deg);
-  transform: translate(-133px, 20%) skew(0deg); }
-
+/*.aboutCont.open {
+	@include transform(translate(-133px, 20%) skew(0deg));
+}
+*/
+/*.stillsCont {
+	@include transform(translate(34px, -120%) skew(-30deg));
+}
+*/
 .stillsCont {
-  -webkit-transform: translate(34px, -120%) skew(-30deg);
-  transform: translate(34px, -120%) skew(-30deg); }
+  -webkit-transform: translate(-50%, 70%);
+  transform: translate(-50%, 70%); }
 
-.stillsCont.open {
-  -webkit-transform: translate(0, -120%) skew(0deg);
-  transform: translate(0, -120%) skew(0deg); }
-
+/*.stillsCont.open {
+	@include transform(translate(0, -120%) skew(0deg));
+}
+*/
+/*.contactCont {
+	@include transform(translate(0, -30%) rotateX(90deg));
+	transition: all 0.5s ease-in-out;
+}
+*/
 .contactCont {
-  -webkit-transform: translate(0, -30%) rotateX(90deg);
-  transform: translate(0, -30%) rotateX(90deg);
-  transition: all 0.5s ease-in-out; }
+  -webkit-transform: translate(-50%, 290%);
+  transform: translate(-50%, 290%); }
 
-.contactCont.open {
-  -webkit-transform: translate(0, 20%) rotateX(0deg);
-  transform: translate(0, 20%) rotateX(0deg);
-  transition: all 0.5s 0.2s ease-in-out; }
-
+/*.contactCont.open {
+	@include transform(translate(0, 20%) rotateX(0deg));
+	transition: all 0.5s 0.2s ease-in-out;
+}
+*/
 .landingHead {
   display: inline-block;
   font-size: 18px;
@@ -199,11 +218,12 @@ html, body {
   letter-spacing: 12px;
   text-transform: uppercase;
   color: #fafafa;
-  transition: all 0.5s 0.2s ease-in-out; }
+  /*transition: all 0.5s 0.2s ease-in-out;*/ }
 
-.landingHead.open {
-  transition: all 0.5s ease-in-out; }
-
+/*.landingHead.open {
+	transition: all 0.5s ease-in-out;
+}
+*/
 .fName {
   -webkit-transform: skew(30deg);
   transform: skew(30deg);
@@ -222,25 +242,21 @@ html, body {
   -webkit-transform: translate(-110%, 0) skew(0deg);
   transform: translate(-110%, 0) skew(0deg); }
 
-.about {
-  -webkit-transform: translate(110%, 0) skew(30deg);
-  transform: translate(110%, 0) skew(30deg); }
-
-.about.open {
-  -webkit-transform: translate(0, 0) skew(0deg);
-  transform: translate(0, 0) skew(0deg); }
-
-.stills {
-  -webkit-transform: translate(-110%, 0) skew(30deg);
-  transform: translate(-110%, 0) skew(30deg); }
-
+/*.about {
+	@include transform(translate(110%, 0) skew(30deg));
+}
+*/
+/*.about.open {
+	@include transform(translate(0, 0) skew(0deg));
+}
+*/
+/*.stills {
+	@include transform(translate(-110%, 0) skew(30deg));
+}
 .stills.open {
-  -webkit-transform: translate(0, 0) skew(0deg);
-  transform: translate(0, 0) skew(0deg); }
-
-.motion:hover, .stills:hover, .about:hover, .contact:hover {
-  font-weight: 200; }
-
+	@include transform(translate(0, 0) skew(0deg));
+}
+*/
 .part {
   position: absolute;
   top: 50%;
@@ -253,7 +269,14 @@ html, body {
   transition: all 0.5s 0.2s ease-in-out;
   animation: partLoad 2.5s ease-in-out; }
 
+/*.part.open {
+	@include transform(translate(-50%, -50%) rotate(0deg));
+	transition: all 0.5s ease-in-out;
+}
+*/
 .part.open {
+  left: 15%;
+  height: 120px;
   -webkit-transform: translate(-50%, -50%) rotate(0deg);
   transform: translate(-50%, -50%) rotate(0deg);
   transition: all 0.5s ease-in-out; }
