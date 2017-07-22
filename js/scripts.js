@@ -8,6 +8,11 @@
 	}
 })();
 
+(function menuHover() {
+	$(".portHead").hover(function() {
+		$(".portHead").not(this).toggleClass("fade");
+	})
+})();
 
 // (function focus() {
 // 	var focus = document.getElementsByClassName("focus");
