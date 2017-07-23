@@ -16,14 +16,6 @@ p {
 	height: 100%;
 	width: 100%;
 }
-/*.content {
-	position: absolute;
-	height: 66%;
-	width: 66%;
-	top: 50%;
-	left: 50%;
-	@include transform(translate(-50%, -50%));
-}*/
 
 @import "landingSect";
 @import "aboutSect";
