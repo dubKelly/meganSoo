@@ -1,3 +1,4 @@
+@import "mixins";
 @import "reset";
 
 /*_*/
@@ -7,11 +8,24 @@ html, body {
 	font-family: "Raleway", sans-serif;
 	overflow-x: hidden;
 }
+p {
+	line-height: 1.2;
+	text-align: center;
+}
 .sectionCont {
 	height: 100%;
 	width: 100%;
 }
+/*.content {
+	position: absolute;
+	height: 66%;
+	width: 66%;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+}*/
 
-@import "landing";
+@import "landingSect";
+@import "aboutSect";
 
 @import "mediaQueries/mainMq";
