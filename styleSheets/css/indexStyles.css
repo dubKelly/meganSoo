@@ -189,11 +189,19 @@ p {
   transform: translateX(18px); }
 
 .head, .portCont {
-  position: relative;
+  position: absolute;
   top: 50%;
   left: 50%;
+  height: 200px;
+  width: 100%;
   -webkit-transform: translate(-50%, -50%);
   transform: translate(-50%, -50%); }
+
+.head {
+  z-index: 1; }
+
+.head.open {
+  z-index: 0; }
 
 .headCont {
   position: absolute;
