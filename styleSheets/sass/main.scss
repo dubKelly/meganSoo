@@ -15,6 +15,13 @@ p {
 	height: 100%;
 	width: 100%;
 }
+.headBefore {
+	position: absolute;
+	left: 50%;
+	height: 40px;
+	width: 1px;
+	background-color: rgba(199, 0, 57, 1);
+}
 .sectionHead {
 	font-size: 18px;
 	text-transform: uppercase;

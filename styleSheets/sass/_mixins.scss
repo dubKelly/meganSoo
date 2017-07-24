@@ -14,3 +14,21 @@
 	-o-animation: $properties;
 	animation: $properties;
 }
+@mixin columns($count, $gap) {
+	-webkit-column-count: $count;
+	-moz-column-count: $count;
+	column-count: $count;
+	-webkit-column-gap: $gap;
+	-moz-column-gap: $gap;
+	column-gap: $gap;
+}
+@mixin filter($scale) {
+	filter: grey;
+	-webkit-filter: greyscale($scale);
+	filter: grayscale($scale);
+}
+@mixin noFilter($scale) {
+	filter: none;
+	-webkit-filter: greyscale($scale);
+	filter: grayscale($scale);
+}

@@ -1,6 +1,11 @@
 /* stillsMin550 */
 
+@import "../../mixins";
+
 .stillsSect {
 	padding-left: calc((100% - 550px) / 2);
 	padding-right: calc((100% - 550px) / 2);
+}
+.galleryCont {
+	@include columns(2, 0);
 }

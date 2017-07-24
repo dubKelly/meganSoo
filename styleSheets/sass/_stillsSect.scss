@@ -1,5 +1,7 @@
 /* stillsSect */
 
+@import "mixins";
+
 .stillsSect {
 	position: relative;
 	padding: 17% 0 17% 0;
@@ -10,11 +12,13 @@
 	padding-top: 0;
 	padding-bottom: 0;
 }
+.stillsHeadBefore {
+	@include transform(translate(-74px, 46px) rotate(23deg));
+}
 .galleryCont {
 	width: 100%;
 	height: 100%;
-	column-count: 3;
-	column-gap: 0;
+	@include columns(1, 0);
 }
 .gallery {
 	position: static;
@@ -22,5 +26,10 @@
 	width: calc(100% - 10px);
 	max-width: 265px;
 	margin: 5px;
-	/*float: left;*/
+	@include filter(1);
+	cursor: pointer;
+	transition: all 0.3s ease-in-out;
+}
+.gallery:hover {
+	@include noFilter(0);
 }

@@ -8,19 +8,7 @@
 	padding: 0 17% 60px 17%;
 }
 .aboutHeadBefore {
-	position: absolute;
-	left: 50%;
-	height: 40px;
-	width: 1px;
-	background-color: rgba(199, 0, 57, 1);
+	/* main.scss >> .headBefore */
 	@include transform(translate(-70px, -14px) rotate(23deg));
 }
-/*.sectionHead {
-	font-size: 18px;
-	text-transform: uppercase;
-	text-align: center;
-	margin-bottom: 30px;
-	letter-spacing: 12px;
-	font-weight: 400;
-}*/
 /* main.scss >> p */
