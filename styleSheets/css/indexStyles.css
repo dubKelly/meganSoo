@@ -69,7 +69,7 @@ p {
   font-size: 18px;
   text-transform: uppercase;
   text-align: center;
-  margin: 60px 0 60px 0;
+  padding: 60px 0 60px 0;
   letter-spacing: 12px;
   font-weight: 400; }
 
@@ -370,8 +370,8 @@ p {
 
 .aboutHeadBefore {
   /* main.scss >> .headBefore */
-  -webkit-transform: translate(-70px, -14px) rotate(23deg);
-  transform: translate(-70px, -14px) rotate(23deg); }
+  -webkit-transform: translate(-70px, 46px) rotate(23deg);
+  transform: translate(-70px, 46px) rotate(23deg); }
 
 /* main.scss >> p */
 /* stillsSect */
@@ -383,11 +383,19 @@ p {
   padding-left: calc((100% - 265px) / 2);
   padding-right: calc((100% - 265px) / 2);
   padding-top: 0;
-  padding-bottom: 0; }
+  padding-bottom: 60px; }
 
 .stillsHeadBefore {
   -webkit-transform: translate(-74px, 46px) rotate(23deg);
   transform: translate(-74px, 46px) rotate(23deg); }
+
+.categoryCont {
+  text-align: center;
+  padding-bottom: 60px; }
+
+.categories {
+  padding: 0 30px 0 30px;
+  text-transform: uppercase; }
 
 .galleryCont {
   width: 100%;
