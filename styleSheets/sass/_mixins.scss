@@ -8,3 +8,9 @@
 	-webkit-transform: $morph;
 	transform: $morph;
 }
+@mixin animation($properties) {
+	-webkit-animation: $properties;
+	-moz-animation: $properties;
+	-o-animation: $properties;
+	animation: $properties;
+}

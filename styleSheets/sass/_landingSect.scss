@@ -11,7 +11,7 @@
 .landingCont {
 	/* main.scss >> .sectionCont */
 	background-color: rgba(0, 0, 0, 0.5);
-	animation: fadeIn 2.5s ease-in-out;
+	@include animation(fadeIn 2.5s ease-in-out);
 }
 .container {
 	position: relative;
@@ -30,6 +30,7 @@
 	width: 32px;
 	background-color: rgba(199, 0, 57, 1);
 	transition: all 0.4s ease-in-out;
+	@include animation(burgerLoad 3.5s ease-in-out);
 }
 .burger span:nth-child(1) {
 	top: 0px;
@@ -111,7 +112,7 @@
 .fName {
 	@include transform(skew(30deg));
 	transition: all 0.5s 0.2s ease-in-out;
-	animation: fNameLoad 2.8s ease-out;
+	@include animation(fNameLoad 2.8s ease-out);
 }
 .fName.open {
 	@include transform(translate(110%, 0) skew(0deg));
@@ -120,7 +121,7 @@
 .lName {
 	@include transform(skew(30deg));
 	transition: all 0.5s 0.2s ease-in-out;
-	animation: lNameLoad 2.8s ease-out;
+	@include animation(lNameLoad 2.8s ease-out);
 }
 .lName.open {
 	@include transform(translate(-110%, 0) skew(0deg));
@@ -139,7 +140,7 @@
 	background-color: rgba(199, 0, 57, 1);
 	@include transform(translate(26px, -50%) rotate(30deg));
 	transition: all 0.5s 0.2s ease-in-out;
-	animation: partLoad 2.5s ease-in-out;
+	@include animation(partLoad 2.5s ease-in-out);
 }
 .part.open {
 	left: 15%;
@@ -162,8 +163,19 @@
 	position: relative;
 	top: 90%;
 	left: 50%;
+	text-align: center;
+	@include transform(translate(-50%, -50%));
 }
 .arrow {
 	height: 60px;
-	@include transform(translate(-50%, -50%) rotate(180deg));
+	cursor: pointer;
+	@include transform(rotate(180deg));
+}
+.arrowPoly {
+	fill: rgba(250, 250, 250, 0);
+	@include animation(pulse 4s 3s infinite ease-in-out);
+}
+.arrow:hover .arrowPoly {
+	fill: rgba(250, 250, 250, 1);
+	@include animation(pulse 4s 3s ease-in-out);
 }
