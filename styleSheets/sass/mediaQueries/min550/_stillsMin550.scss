@@ -17,6 +17,30 @@
 	text-transform: uppercase;
 	cursor: pointer;
 }
+.underline {
+	position: absolute;
+	background-color: #000;
+	height: 1px;
+	left: 50%;
+	top: 20px;
+	transition: all 0.5s ease-in-out;
+}
+.underline.all {
+	width: 30px;
+	@include transform(translateX(-232px));
+}
+.underline.fashion {
+	width: 64px;
+	@include transform(translateX(-141px));
+}
+.underline.headShot {
+	width: 92px;
+	@include transform(translateX(-17px));
+}
+.underline.commercial {
+	width: 97px;
+	@include transform(translate(135px));
+}
 .galleryCont {
 	@include columns(2, 0);
 }

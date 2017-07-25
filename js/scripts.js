@@ -57,16 +57,20 @@
 (function categoryFilter() {
   var categories = document.getElementsByClassName("categories");
   var gallery = document.getElementsByClassName("gallery");
+  var line = document.getElementsByClassName("underline")[0];
   var type = "";
+  var current = ["add"];
   for (var i = categories.length - 1; i >= 0; i--) {
     categories[i].onclick = function() {
       function hasClass(element, cls) {
         return ('' + element.className + '').indexOf('' + cls + '') > -1; 
       }
-      type = this.getAttribute("data-type");
+      line.classList.remove(current.pop());
+      next = this.getAttribute("data-type");
+      current = [next];
+      line.classList.add(next);
       for (var i = gallery.length - 1; i >= 0; i--) {
-        if (hasClass(gallery[i], type) === false) {
-          console.log(gallery[i]);
+        if (hasClass(gallery[i], next) === false) {
           gallery[i].classList.add("hide");
         }
         else {

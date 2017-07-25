@@ -519,6 +519,34 @@ p {
     text-transform: uppercase;
     cursor: pointer; }
 
+  .underline {
+    position: absolute;
+    background-color: #000;
+    height: 1px;
+    left: 50%;
+    top: 20px;
+    transition: all 0.5s ease-in-out; }
+
+  .underline.all {
+    width: 30px;
+    -webkit-transform: translateX(-232px);
+    transform: translateX(-232px); }
+
+  .underline.fashion {
+    width: 64px;
+    -webkit-transform: translateX(-141px);
+    transform: translateX(-141px); }
+
+  .underline.headShot {
+    width: 92px;
+    -webkit-transform: translateX(-17px);
+    transform: translateX(-17px); }
+
+  .underline.commercial {
+    width: 97px;
+    -webkit-transform: translate(135px);
+    transform: translate(135px); }
+
   .galleryCont {
     -webkit-column-count: 2;
     -moz-column-count: 2;
