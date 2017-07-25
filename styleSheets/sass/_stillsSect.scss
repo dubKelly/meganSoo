@@ -36,3 +36,6 @@
 .gallery:hover {
 	@include noFilter(0);
 }
+.gallery.hide {
+	display: none;
+}
