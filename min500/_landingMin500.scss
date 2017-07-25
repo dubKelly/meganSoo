@@ -1,0 +1,67 @@
+/* _landingMin500 */
+
+.headCont {
+	transition: all 0.5s 0.2s ease-in-out;
+}
+.headCont.open {
+	left: 50%;
+	transition: all 0.5s ease-in-out;
+}
+.fNameCont.open {
+	/*left: 50%;*/
+	@include transform(translate(-137px, -120%) skew(0deg));
+}
+.lNameCont.open {
+	/*left: 50%;*/
+	@include transform(translate(0, 20%) skew(0deg));
+}
+.motionCont {
+	@include transform(translate(-153px, -70%) rotateX(90deg));
+	transition: all 0.5s ease-in-out;
+}
+.motionCont.open {
+	@include transform(translate(-154px, -120%) rotateX(0deg));
+	transition: all 0.5s 0.2s ease-in-out;
+}
+.aboutCont {
+	@include transform(translate(-116px, 20%) skew(-30deg));
+}
+.aboutCont.open {
+	@include transform(translate(-133px, 20%) skew(0deg));
+}
+.stillsCont {
+	@include transform(translate(34px, -120%) skew(-30deg));
+}
+.stillsCont.open {
+	@include transform(translate(0, -120%) skew(0deg));
+}
+.contactCont {
+	@include transform(translate(0, -30%) rotateX(90deg));
+	transition: all 0.5s ease-in-out;
+}
+.contactCont.open {
+	@include transform(translate(0, 20%) rotateX(0deg));
+	transition: all 0.5s 0.2s ease-in-out;
+}
+.landingHead {
+	transition: all 0.5s 0.2s ease-in-out;
+}
+.landingHead.open {
+	transition: all 0.5s ease-in-out;
+}
+.about {
+	@include transform(translate(110%, 0) skew(30deg));
+}
+.about.open {
+	@include transform(translate(0, 0) skew(0deg));
+}
+.stills {
+	@include transform(translate(-110%, 0) skew(30deg));
+}
+.part {
+	transition: all 0.5s 0.2s ease-in-out;
+}
+.part.open {
+	left: 50%;
+	height: 80px;
+}

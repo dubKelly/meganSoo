@@ -51,7 +51,7 @@ html, body {
   font-family: "Raleway", sans-serif; }
 
 p {
-  line-height: 1.5;
+  line-height: 1.2;
   text-align: center; }
 
 .sectionCont {
@@ -389,7 +389,7 @@ p {
   -webkit-transform: translate(-74px, 46px) rotate(23deg);
   transform: translate(-74px, 46px) rotate(23deg); }
 
-.categoryCont {
+.categoryCont, .categories {
   display: none; }
 
 .galleryCont {
@@ -548,4 +548,4 @@ p {
     -moz-column-gap: 0;
     column-gap: 0; } }
 
-/*# sourceMappingURL=indexStyles.css.map */
+/*# sourceMappingURL=inexStyles.css.map */
