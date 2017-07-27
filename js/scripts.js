@@ -33,9 +33,9 @@
         var $target = $(hash), target = this.hash;
         if (target) {
           $(this).click(function (event) {
-            console.log(this);
-            console.log(thisPath);
-            console.log(hash);
+            // console.log(this);
+            // console.log(thisPath);
+            // console.log(hash);
             event.preventDefault();
             $('html, body').animate({scrollTop: $target.offset().top}, 1000, function () {
               location.hash = target; 
@@ -60,18 +60,37 @@
   var line = document.getElementsByClassName("underline")[0];
   var type = "";
   var current = ["add"];
+  var posBefore;
+  var posAfter;
+
+  // function test() {  
+  //   console.log("works");
+  //   var  = gallery[9].getBoundingClientRect();
+  //   console.log(xY.top, xY.left);
+  // }
+  // window.onload = test();
+
+  function hasClass(element, cls) {
+    return ('' + element.className + '').indexOf('' + cls + '') > -1; 
+  }
+
   for (var i = categories.length - 1; i >= 0; i--) {
     categories[i].onclick = function() {
-      function hasClass(element, cls) {
-        return ('' + element.className + '').indexOf('' + cls + '') > -1; 
-      }
       line.classList.remove(current.pop());
       next = this.getAttribute("data-type");
       current = [next];
       line.classList.add(next);
       for (var i = gallery.length - 1; i >= 0; i--) {
-        if (hasClass(gallery[i], next) === false) {
+        if (hasClass(gallery[i], next) === true) {
+          posBefore = gallery[i].getBoundingClientRect();
+        }
+        else {
           gallery[i].classList.add("hide");
+        }
+      }
+      for (var i = gallery.length - 1; i >= 0; i--) {      
+        if (hasClass(gallery[i], "hide") === false) {
+          posAfter = gallery[i].getBoundingClientRect();
         }
         else {
           gallery[i].classList.remove("hide");
