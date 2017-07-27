@@ -55,20 +55,15 @@
 })();
 
 (function categoryFilter() {
+  
   var categories = document.getElementsByClassName("categories");
+  var galleryCont = document.getElementsByClassName("galleryCont")[0];
   var gallery = document.getElementsByClassName("gallery");
   var line = document.getElementsByClassName("underline")[0];
-  var type = "";
   var current = ["add"];
-  var posBefore;
-  var posAfter;
-
-  // function test() {  
-  //   console.log("works");
-  //   var  = gallery[9].getBoundingClientRect();
-  //   console.log(xY.top, xY.left);
-  // }
-  // window.onload = test();
+  // var selected = [];
+  // var posBefore;
+  // var posAfter = [];
 
   function hasClass(element, cls) {
     return ('' + element.className + '').indexOf('' + cls + '') > -1; 
@@ -81,24 +76,51 @@
       current = [next];
       line.classList.add(next);
       for (var i = gallery.length - 1; i >= 0; i--) {
-        if (hasClass(gallery[i], next) === true) {
-          posBefore = gallery[i].getBoundingClientRect();
-        }
-        else {
+        if (hasClass(gallery[i], next) === false) {
           gallery[i].classList.add("hide");
-        }
-      }
-      for (var i = gallery.length - 1; i >= 0; i--) {      
-        if (hasClass(gallery[i], "hide") === false) {
-          posAfter = gallery[i].getBoundingClientRect();
+          // posBefore = gallery[i].getBoundingClientRect();
         }
         else {
           gallery[i].classList.remove("hide");
         }
       }
+      // for (var i = gallery.length - 1; i >= 0; i--) {      
+      //   if (hasClass(gallery[i], "hide") === false) {
+      //     posAfter.push(this.getBoundingClientRect());
+      //     console.log(posAfter);
+      //     selected.push(gallery[i])
+      //     gallery[i].parentNode.parentNode.appendChild(gallery[i]);
+      //   }
+      //   else {
+      //     gallery[i].classList.remove("hide");
+        // }
+      // }
     }
   }
 })();
+
+(function galleryEnlarge() {
+
+  var gallery = document.getElementsByClassName("gallery");
+  var enlarge = document.getElementsByClassName("enlarge")[0];
+  var fullScreen = document.getElementsByClassName("fullScreen");
+  // var exit = document.getElementsByClassName("exitFullScreen")[0];
+
+  for (var i = gallery.length - 1; i >= 0; i--) {
+    gallery[i].onclick = function() {
+      enlarge.style.backgroundImage = "url('" + this.getAttribute("src") + "')";
+      for (var i = fullScreen.length - 1; i >= 0; i--) {
+        fullScreen[i].classList.add("open");
+        fullScreen[2].onclick = function() {
+          for (var i = fullScreen.length - 1; i >= 0; i--) {
+            fullScreen[i].classList.remove("open");
+          }
+        }
+      }
+    }
+  }
+})();
+
 // (function focus() {
 // 	var focus = document.getElementsByClassName("focus");
 // 	document.onmousemove = function mouseX(event) {
