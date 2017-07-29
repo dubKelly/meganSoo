@@ -11,6 +11,9 @@ p {
 	line-height: 1.5;
 	text-align: center;
 }
+a {
+	text-decoration: none;
+}
 .sectionCont {
 	height: 100%;
 	width: 100%;
@@ -34,5 +37,6 @@ p {
 @import "landingSect";
 @import "aboutSect";
 @import "stillsSect";
+@import "pages/contactSect";
 
 @import "mediaQueries/mainMq";

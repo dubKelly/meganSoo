@@ -1,0 +1,82 @@
+/* _contactSect */
+
+@import "../mixins";
+
+.contactSect {
+	height: 100%;
+}
+.greetingCont {
+	position: relative;
+}
+.contactHeadBefore {
+	@include transform(translate(-92px, 46px) rotate(23deg));
+}
+.emphasize {
+	font-size: 18px;
+}
+.icons {
+	position: relative;
+	text-align: center;
+	padding: 15px 0 15px 0;
+}
+.icon {
+	display: inline-block;
+	height: 60px;
+	width: 60px;
+}
+.icon path, .icon polygon {
+	fill: #b8b8b8;
+	transition: all 0.2s ease-in-out;
+}
+.facebook:hover svg path {
+	fill: #3b5998;
+}
+.instagram:hover svg path {
+	fill: #c32aa3;
+}
+.twitter:hover svg path {
+	fill: #4099ff;
+}
+.youTube:hover svg path.you, .youTube:hover svg polygon.you {
+	fill: black;
+}
+.youTube:hover svg path.tube {
+	fill: #bb0000;
+}
+.formCont {
+	position: relative;
+	height: calc(100% - 282px);
+	min-height: 250px;
+}
+.formCont form {
+	position: absolute;
+	top: calc(50% - 30px);
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	width: 75%;
+}
+.input {
+	width: 100%;
+	margin: 3px 0;
+	padding: 3px 6px;
+	border: 1px solid black;
+	box-sizing: border-box;
+	box-shadow: none;
+	resize: none;
+	font-size: 14px;
+}
+.input::-webkit-input-placeholder, .submit {
+	font-family: "Raleway", sans-serif;
+	font-weight: 400;
+	color: black;
+}
+.submit {
+	position: relative;
+	width: 33%;
+	float: right;
+	margin: 12px 0 3px 0;
+	padding: 3px 6px;
+	font-size: 14px;
+	background-color: white;
+	border: 1px solid black;
+}

@@ -53,6 +53,7 @@
 	height: 100%;
 	background-color: rgba(0, 0, 0, 0.8);
 	display: none;
+	z-index: 100;
 }
 .enlargeCont.open {
 	display: block;
