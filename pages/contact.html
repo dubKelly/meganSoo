@@ -13,7 +13,7 @@
 		<div class="container">
 			<span class="headBefore contactHeadBefore"></span>
 		</div>
-		<h2 class="sectionHead">Contact</h2>
+		<h2 class="sectionHead contactHead">Contact</h2>
 		<p class="emphasize">Say Hi.</p>
 		<p>I'd love to hear from you!</p>
 		<div class="icons">
@@ -52,8 +52,8 @@
 		</div>
 	</div>
 	<div class="formCont">
-		<form action="contact.php" id="form" method="post">
-			<input type="hidden" name="token" value="<?php echo $newToken; ?>">
+		<form>
+			<!-- <input type="hidden" name="token" value="<?php echo $newToken; ?>"> -->
 			<input class="input" type="text" name="name" placeholder="Name">
 			<input class="input" type="text" name="email" placeholder="Email">
 			<textarea class="input" name="message" rows="4" placeholder="Message"></textarea>

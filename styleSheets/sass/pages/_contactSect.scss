@@ -9,7 +9,7 @@
 	position: relative;
 }
 .contactHeadBefore {
-	@include transform(translate(-92px, 46px) rotate(23deg));
+	@include transform(translate(-86px, 46px) rotate(23deg));
 }
 .emphasize {
 	font-size: 18px;
@@ -23,6 +23,7 @@
 	display: inline-block;
 	height: 60px;
 	width: 60px;
+	cursor: pointer;
 }
 .icon path, .icon polygon {
 	fill: #b8b8b8;
@@ -59,7 +60,7 @@
 	width: 100%;
 	margin: 3px 0;
 	padding: 3px 6px;
-	border: 1px solid black;
+	border: 1px solid #7f7f7f;
 	box-sizing: border-box;
 	box-shadow: none;
 	resize: none;
@@ -78,5 +79,6 @@
 	padding: 3px 6px;
 	font-size: 14px;
 	background-color: white;
-	border: 1px solid black;
+	border: 1px solid #7f7f7f;
+	cursor: pointer;
 }

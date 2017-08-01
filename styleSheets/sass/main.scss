@@ -29,7 +29,7 @@ a {
 	font-size: 18px;
 	text-transform: uppercase;
 	text-align: center;
-	padding: 60px 0 60px 0;
+	padding: 60px 0 60px 6px;
 	letter-spacing: 12px;
 	font-weight: 400;
 }
@@ -37,6 +37,7 @@ a {
 @import "landingSect";
 @import "aboutSect";
 @import "stillsSect";
+@import "motionSect";
 @import "pages/contactSect";
 
 @import "mediaQueries/mainMq";

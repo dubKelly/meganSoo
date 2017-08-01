@@ -25,7 +25,7 @@
       .replace(/\/$/, '');
   }
   var locationPath = filterPath(location.pathname);
-  $('a[href*="#"]').each(function () {
+  $('a[href*="#"]').each(function() {
     var thisPath = filterPath(this.pathname) || locationPath;
     var hash = this.hash;
     if ($("#" + hash.replace(/#/, '')).length) {
@@ -33,18 +33,15 @@
         var $target = $(hash), target = this.hash;
         if (target) {
           $(this).click(function (event) {
-            // console.log(this);
-            // console.log(thisPath);
-            // console.log(hash);
             event.preventDefault();
-            $('html, body').animate({scrollTop: $target.offset().top}, 1000, function () {
+            $('html, body').animate({scrollTop: $target.offset().top}, 800, function() {
               location.hash = target; 
               $target.focus();
-              if ($target.is(":focus")){ //checking if the target was focused
+              if ($target.is(":focus")) {
                 return false;
               }else{
-                $target.attr('tabindex','-1'); //Adding tabindex for elements not focusable
-                $target.focus(); //Setting focus
+                $target.attr('tabindex','-1');
+                $target.focus();
               };
             });       
           });
@@ -57,10 +54,9 @@
 (function categoryFilter() {
   
   var categories = document.getElementsByClassName("categories");
-  var galleryCont = document.getElementsByClassName("galleryCont")[0];
   var gallery = document.getElementsByClassName("gallery");
   var line = document.getElementsByClassName("underline")[0];
-  var current = ["add"];
+  var current = ["gallery"];
   // var selected = [];
   // var posBefore;
   // var posAfter = [];

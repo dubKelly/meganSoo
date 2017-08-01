@@ -72,7 +72,7 @@ a {
   font-size: 18px;
   text-transform: uppercase;
   text-align: center;
-  padding: 60px 0 60px 0;
+  padding: 60px 0 60px 6px;
   letter-spacing: 12px;
   font-weight: 400; }
 
@@ -373,8 +373,8 @@ a {
 
 .aboutHeadBefore {
   /* main.scss >> .headBefore */
-  -webkit-transform: translate(-70px, 46px) rotate(23deg);
-  transform: translate(-70px, 46px) rotate(23deg); }
+  -webkit-transform: translate(-64px, 46px) rotate(23deg);
+  transform: translate(-64px, 46px) rotate(23deg); }
 
 /* main.scss >> p */
 /* stillsSect */
@@ -389,8 +389,8 @@ a {
   padding-bottom: 60px; }
 
 .stillsHeadBefore {
-  -webkit-transform: translate(-74px, 46px) rotate(23deg);
-  transform: translate(-74px, 46px) rotate(23deg); }
+  -webkit-transform: translate(-68px, 46px) rotate(23deg);
+  transform: translate(-68px, 46px) rotate(23deg); }
 
 .categoryCont {
   display: none; }
@@ -429,6 +429,11 @@ a {
 .gallery.animate {
   position: absolute; }
 
+/* _motionSect */
+.motionSect {
+  height: 66%;
+  width: 100%; }
+
 /* _contactSect */
 .contactSect {
   height: 100%; }
@@ -437,8 +442,8 @@ a {
   position: relative; }
 
 .contactHeadBefore {
-  -webkit-transform: translate(-92px, 46px) rotate(23deg);
-  transform: translate(-92px, 46px) rotate(23deg); }
+  -webkit-transform: translate(-86px, 46px) rotate(23deg);
+  transform: translate(-86px, 46px) rotate(23deg); }
 
 .emphasize {
   font-size: 18px; }
@@ -451,7 +456,8 @@ a {
 .icon {
   display: inline-block;
   height: 60px;
-  width: 60px; }
+  width: 60px;
+  cursor: pointer; }
 
 .icon path, .icon polygon {
   fill: #b8b8b8;
@@ -489,7 +495,7 @@ a {
   width: 100%;
   margin: 3px 0;
   padding: 3px 6px;
-  border: 1px solid black;
+  border: 1px solid #7f7f7f;
   box-sizing: border-box;
   box-shadow: none;
   resize: none;
@@ -508,7 +514,8 @@ a {
   padding: 3px 6px;
   font-size: 14px;
   background-color: white;
-  border: 1px solid black; }
+  border: 1px solid #7f7f7f;
+  cursor: pointer; }
 
 /* _mainMq */
 @media only screen and (min-width: 550px) {
@@ -615,8 +622,9 @@ a {
     top: 20px;
     transition: all 0.2s ease-out; }
 
-  .underline.all {
+  .underline.gallery {
     width: 30px;
+    margin: 0;
     -webkit-transform: translateX(-232px);
     transform: translateX(-232px); }
 
@@ -671,8 +679,7 @@ a {
     top: 12px;
     height: 1px;
     width: 32px;
-    background-color: #fafafa;
-    transition: all 0.3s ease-in-out; }
+    background-color: #c70039; }
 
   .exitFullScreen span:nth-child(1) {
     -webkit-transform: rotate(45deg);
@@ -681,9 +688,6 @@ a {
   .exitFullScreen span:nth-child(2) {
     -webkit-transform: rotate(-45deg);
     transform: rotate(-45deg); }
-
-  .exitFullScreen:hover span {
-    background-color: #c70039; }
 
   .enlarge {
     position: absolute;
