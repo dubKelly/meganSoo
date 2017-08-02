@@ -117,6 +117,19 @@
   }
 })();
 
+(function youTubeLoad() {
+
+  var video = document.getElementsByClassName("videoCont")[0];
+  var play = document.getElementById("playBtn");
+
+  play.onclick = function() {
+    var iFrame = document.createElement("iframe");
+    iFrame.setAttribute("src", "https://www.youtube.com/embed/ZH8YjUJHyS0?autoplay=1");
+    iFrame.setAttribute("allowfullscreen", "");
+    video.appendChild(iFrame);
+  }
+})();
+
 // (function focus() {
 // 	var focus = document.getElementsByClassName("focus");
 // 	document.onmousemove = function mouseX(event) {

@@ -1,6 +1,54 @@
 /* _motionSect */
 
+@import "mixins";
+
 .motionSect {
-	height: 66%;
+	position: relative;
+	height: calc(66% + 138px);
 	width: 100%;
+	background-color: rgba(199, 0, 57, 1);
+}
+.motionHeadBefore {
+	background-color: black;
+	@include transform(translate(-75px, 46px) rotate(23deg));
+}
+.motionHead {
+	color: white;
+}
+.videoCont {
+	position: relative;
+	height: calc(100% - 138px);
+	min-height: 320px;
+	@include background-image("../../images/Megan Soo - triplex.jpg");
+}
+.videoCont iframe {
+	position: absolute;
+	top: 0;
+	height: 100%;
+	width: 100%;
+	z-index: 100;
+}
+.play {
+	top: 50%;
+	@include transform(translateY(-50%));
+}
+.play svg {
+	height: 80px;
+	width: 80px;
+	cursor: pointer;
+}
+.play svg path {
+	transition: all 0.3s ease-in-out;
+}
+.play svg path:nth-child(1) {
+	fill: rgba(0, 0, 0, 0.5);
+}
+.play svg:hover path:nth-child(1) {
+	fill: rgba(0, 0, 0, 0.6);
+}
+.play svg path:nth-child(2) {
+	fill: rgba(250, 250, 250, 0.3);
+}
+.play svg:hover path:nth-child(2) {
+	fill: rgba(250, 250, 250, 0.9);
 }

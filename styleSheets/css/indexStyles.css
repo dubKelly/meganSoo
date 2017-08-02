@@ -57,6 +57,9 @@ p {
 a {
   text-decoration: none; }
 
+.container {
+  position: relative; }
+
 .sectionCont {
   height: 100%;
   width: 100%; }
@@ -151,9 +154,6 @@ a {
   -moz-animation: fadeIn 2.5s ease-in-out;
   -o-animation: fadeIn 2.5s ease-in-out;
   animation: fadeIn 2.5s ease-in-out; }
-
-.container {
-  position: relative; }
 
 .burger {
   cursor: pointer;
@@ -431,8 +431,59 @@ a {
 
 /* _motionSect */
 .motionSect {
-  height: 66%;
-  width: 100%; }
+  position: relative;
+  height: calc(66% + 138px);
+  width: 100%;
+  background-color: #c70039; }
+
+.motionHeadBefore {
+  background-color: black;
+  -webkit-transform: translate(-75px, 46px) rotate(23deg);
+  transform: translate(-75px, 46px) rotate(23deg); }
+
+.motionHead {
+  color: white; }
+
+.videoCont {
+  position: relative;
+  height: calc(100% - 138px);
+  min-height: 320px;
+  background-image: url("../../images/Megan Soo - triplex.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat; }
+
+.videoCont iframe {
+  position: absolute;
+  top: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 100; }
+
+.play {
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
+
+.play svg {
+  height: 80px;
+  width: 80px;
+  cursor: pointer; }
+
+.play svg path {
+  transition: all 0.3s ease-in-out; }
+
+.play svg path:nth-child(1) {
+  fill: rgba(0, 0, 0, 0.5); }
+
+.play svg:hover path:nth-child(1) {
+  fill: rgba(0, 0, 0, 0.6); }
+
+.play svg path:nth-child(2) {
+  fill: rgba(250, 250, 250, 0.3); }
+
+.play svg:hover path:nth-child(2) {
+  fill: rgba(250, 250, 250, 0.9); }
 
 /* _contactSect */
 .contactSect {
