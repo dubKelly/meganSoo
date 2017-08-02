@@ -439,7 +439,15 @@ a {
   height: 100%; }
 
 .greetingCont {
-  position: relative; }
+  position: relative;
+  height: calc(40% - 69px);
+  min-height: 144px; }
+
+.greeting {
+  position: relative;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  transform: translateY(-50%); }
 
 .contactHeadBefore {
   -webkit-transform: translate(-86px, 46px) rotate(23deg);
@@ -480,7 +488,7 @@ a {
 
 .formCont {
   position: relative;
-  height: calc(100% - 282px);
+  height: calc(60% - 69px);
   min-height: 250px; }
 
 .formCont form {
@@ -494,7 +502,7 @@ a {
 .input {
   width: 100%;
   margin: 3px 0;
-  padding: 3px 6px;
+  padding: 6px 8px;
   border: 1px solid #7f7f7f;
   box-sizing: border-box;
   box-shadow: none;
@@ -511,7 +519,7 @@ a {
   width: 33%;
   float: right;
   margin: 12px 0 3px 0;
-  padding: 3px 6px;
+  padding: 6px 8px;
   font-size: 14px;
   background-color: white;
   border: 1px solid #7f7f7f;
