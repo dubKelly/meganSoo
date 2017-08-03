@@ -537,6 +537,9 @@ a {
 .youTube:hover svg path.tube {
   fill: #bb0000; }
 
+.error {
+  color: #c70039; }
+
 .formCont {
   position: relative;
   height: calc(60% - 69px);
