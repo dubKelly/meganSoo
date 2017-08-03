@@ -130,23 +130,6 @@
   }
 })();
 
-(function formVerify() {
-
-  var input = document.getElementsByClassName("input");
-  var submit = document.getElementsById("submit");
-  submit.style.border = "1px solid red";
-
-  submit.onclick = function(event) {
-    event.preventDefault();
-    console.log("works");
-    for (var i = input.length - 1; i >= 0; i--) {
-      if (input[i].value.length === 0) {
-        console.log(input[i]);
-      }
-    }
-  }
-})();
-
 // (function focus() {
 // 	var focus = document.getElementsByClassName("focus");
 // 	document.onmousemove = function mouseX(event) {

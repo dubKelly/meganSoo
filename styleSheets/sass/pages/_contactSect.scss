@@ -52,6 +52,7 @@
 	fill: #bb0000;
 }
 .error {
+	position: relative;
 	color: rgba(199, 0, 57, 1);
 }
 .formCont {
@@ -59,7 +60,7 @@
 	height: calc(60% - 69px);
 	min-height: 250px;
 }
-.formCont form {
+.form {
 	position: absolute;
 	top: calc(50% - 30px);
 	left: 50%;

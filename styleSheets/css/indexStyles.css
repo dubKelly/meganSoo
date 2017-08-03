@@ -538,6 +538,7 @@ a {
   fill: #bb0000; }
 
 .error {
+  position: relative;
   color: #c70039; }
 
 .formCont {
@@ -545,7 +546,7 @@ a {
   height: calc(60% - 69px);
   min-height: 250px; }
 
-.formCont form {
+.form {
   position: absolute;
   top: calc(50% - 30px);
   left: 50%;
