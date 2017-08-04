@@ -24,7 +24,7 @@
 .icons.footIcons {
 	padding: 0;
 }
-.icons.footIcons svg:hover path, .icons.footIcons svg:hover polygon {
+.icons.footIcons a:hover svg path, .icons.footIcons a:hover svg polygon {
 	fill: rgba(199, 0, 57, 1);
 }
 .copyright {

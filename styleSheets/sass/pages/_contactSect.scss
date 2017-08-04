@@ -4,6 +4,7 @@
 
 .contactSect {
 	height: 100%;
+	min-height: 666px;
 }
 .greetingCont {
 	position: relative;
@@ -58,7 +59,7 @@
 .formCont {
 	position: relative;
 	height: calc(60% - 69px);
-	min-height: 250px;
+	min-height: 340px;
 }
 .form {
 	position: absolute;
