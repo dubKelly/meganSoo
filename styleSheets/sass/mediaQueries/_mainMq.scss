@@ -1,15 +1,18 @@
 /* _mainMq */
 
 @media only screen and (min-width: 550px) {
-	@import "min550/landingMin550";
-	@import "min550/stillsMin550";
+	@import "min550/landingMinWidth550";
+	@import "min550/stillsMinWidth550";
 }
 @media only screen and (min-width: 795px) {
-	@import "min795/stillsMin795";
+	@import "min795/stillsMinWidth795";
+}
+@media only screen and (min-height: 795px) {
+	@import "min795/contactMinHeight795";
 }
 @media only screen and (min-width: 1060px) {
-	@import "min1060/stillsMin1060";
+	@import "min1060/stillsMinWidth1060";
 }
-@media only screen and (min-width: 1370px) {
+@media only screen and (min-height: 1370px) {
 	
 }

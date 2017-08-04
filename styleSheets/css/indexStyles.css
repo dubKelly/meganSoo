@@ -611,6 +611,11 @@ a {
   color: #b8b8b8;
   padding: 10px 0; }
 
+/* _contactFooter */
+.footArrow.contactFootArrow {
+  -webkit-transform: rotate(-90deg);
+  transform: rotate(-90deg); }
+
 /* _mainMq */
 @media only screen and (min-width: 550px) {
   /* _landingMin500 */
@@ -807,6 +812,13 @@ a {
     -webkit-column-gap: 0;
     -moz-column-gap: 0;
     column-gap: 0; } }
+@media only screen and (min-height: 795px) {
+  /* _contactMinHeight795 */
+  .contactSect {
+    height: calc(100% - 176px); }
+
+  .contactSect textarea {
+    height: 178px; } }
 @media only screen and (min-width: 1060px) {
   /* stillsMin1060 */
   .stillsSect {
