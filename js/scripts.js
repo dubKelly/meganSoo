@@ -134,6 +134,15 @@
   }
 })();
 
+(function replaceDate() {
+
+  var date = new Date();
+  var year = date.getFullYear();
+  var copyright = document.getElementsByClassName("copyright")[0];
+
+  copyright.innerHTML = "&#169 " + year + " Megan Soo";
+})();
+
 // (function focus() {
 // 	var focus = document.getElementsByClassName("focus");
 // 	document.onmousemove = function mouseX(event) {

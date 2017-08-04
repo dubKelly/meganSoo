@@ -1,0 +1,34 @@
+/* _footer */
+
+@import "mixins";
+
+.footer {
+	position: relative;
+	/*height: 180px;*/
+	background-color: #212121;
+}
+.footArrowCont {
+	text-align: center;
+	padding: 15px 0 0 0;
+}
+.footArrow {
+	height: 60px;
+}
+.footArrowPoly {
+	fill: #b8b8b8;
+	transition: all 0.3s ease-in-out;
+}
+.footArrow:hover .footArrowPoly {
+	fill: rgba(199, 0, 57, 1);
+}
+.icons.footIcons {
+	padding: 0;
+}
+.icons.footIcons svg:hover path, .icons.footIcons svg:hover polygon {
+	fill: rgba(199, 0, 57, 1);
+}
+.copyright {
+	font-size: 10px;
+	color: #b8b8b8;
+	padding: 10px 0;
+}

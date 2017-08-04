@@ -584,19 +584,27 @@ a {
 .footer {
   position: relative;
   /*height: 180px;*/
-  background-color: #2b2b2b; }
+  background-color: #212121; }
 
 .footArrowCont {
-  text-align: center; }
+  text-align: center;
+  padding: 15px 0 0 0; }
 
 .footArrow {
   height: 60px; }
 
 .footArrowPoly {
-  fill: #b8b8b8; }
+  fill: #b8b8b8;
+  transition: all 0.3s ease-in-out; }
+
+.footArrow:hover .footArrowPoly {
+  fill: #c70039; }
 
 .icons.footIcons {
-  padding: 0 0 15px 0; }
+  padding: 0; }
+
+.icons.footIcons svg:hover path, .icons.footIcons svg:hover polygon {
+  fill: #c70039; }
 
 .copyright {
   font-size: 10px;
