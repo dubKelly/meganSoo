@@ -1,0 +1,7 @@
+/* _contactFooter */
+
+@import "../mixins";
+
+.footArrow.contactFootArrow {
+	@include transform(rotate(-90deg));
+}

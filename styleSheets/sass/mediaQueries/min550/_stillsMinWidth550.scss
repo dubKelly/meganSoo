@@ -1,0 +1,93 @@
+/* stillsMin550 */
+
+@import "../../mixins";
+
+.stillsSect {
+	padding-left: calc((100% - 550px) / 2);
+	padding-right: calc((100% - 550px) / 2);
+}
+.categoryCont {
+	display: block;
+	text-align: center;
+	padding-bottom: 60px;
+}
+.categories {
+	padding: 0 30px 0 30px;
+	font-size: 14px;
+	text-transform: uppercase;
+	cursor: pointer;
+}
+.underline {
+	position: absolute;
+	background-color: #000;
+	height: 1px;
+	left: 50%;
+	top: 20px;
+	transition: all 0.2s ease-out;
+}
+.underline.gallery {
+	width: 30px;
+	margin: 0;
+	@include transform(translateX(-232px));
+}
+.underline.fashion {
+	width: 64px;
+	@include transform(translateX(-141px));
+}
+.underline.headShot {
+	width: 92px;
+	@include transform(translateX(-17px));
+}
+.underline.commercial {
+	width: 97px;
+	@include transform(translate(135px));
+}
+.galleryCont {
+	@include columns(2, 0);
+}
+.enlargeCont {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	width: 100%;
+	height: 100%;
+	background-color: rgba(0, 0, 0, 0.8);
+	display: none;
+	z-index: 100;
+}
+.enlargeCont.open {
+	display: block;
+}
+.exitFullScreen {
+	position: absolute;
+	top: 30px;
+	right: 30px;
+	height: 24px;
+	width: 32px;
+	cursor: pointer;
+}
+.exitFullScreen span {
+	position: absolute;
+	top: 12px;
+	height: 1px;
+	width: 32px;
+	background-color: rgba(199, 0, 57, 1);
+}
+.exitFullScreen span:nth-child(1) {
+	@include transform(rotate(45deg));
+}
+.exitFullScreen span:nth-child(2) {
+	@include transform(rotate(-45deg));
+}
+.enlarge {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	height: 98%;
+	width: 98%;
+	@include transform(translate(-50%, -50%));
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
+}
