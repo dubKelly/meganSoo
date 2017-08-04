@@ -121,12 +121,16 @@
 
   var video = document.getElementsByClassName("videoCont")[0];
   var play = document.getElementById("playBtn");
+  var clicked = false;
 
   play.onclick = function() {
-    var iFrame = document.createElement("iframe");
-    iFrame.setAttribute("src", "https://www.youtube.com/embed/ZH8YjUJHyS0?autoplay=1");
-    iFrame.setAttribute("allowfullscreen", "");
-    video.appendChild(iFrame);
+    if (!clicked) {
+      clicked = true;
+      var iFrame = document.createElement("iframe");
+      iFrame.setAttribute("src", "https://www.youtube.com/embed/ZH8YjUJHyS0?autoplay=1");
+      iFrame.setAttribute("allowfullscreen", "");
+      video.appendChild(iFrame);
+    }
   }
 })();
 
