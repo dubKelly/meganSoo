@@ -38,10 +38,10 @@ function show_error($myError) {
 	<link rel="stylesheet" type="text/css" href="../styleSheets/css/indexStyles.css">
 	</head>
 	<body>
-	<div class="container">
-		<h1>Hmm...</h1>
+	<div style="position: relative; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
+		<h1 style="font-size: 24px; text-align: center; padding: 30px 0;">Whoops...</h1>
 		<p>Looks like you might have <?php echo $myError ?>.</p>
-		<p>No problem. Just go back and try again.</p>
+		<p>No problem. Just go back and check it out.</p>
 	</div>
 	</body>
 	</html>
