@@ -1,3 +1,63 @@
+<?php
+session_start();
+function generateFormToken($form) {
+	$token = md5(uniqid(microtime(), true));
+	$_SESSION[$form.'_token'] = $token;
+	return $token;
+}
+function verifyFormToken($form) {
+	if (!isset($_SESSION[$form.'_token'])) {
+		return false;
+	}
+	if (!isset($_POST['token'])) {
+		return false;
+	}
+	if ($_SESSION[$form.'_token'] !== $_POST['token']) {
+		return false;
+	}
+	return true;
+}
+function check_input($data, $problem='') {
+	$data = trim($data);
+	$data = stripslashes($data);
+	$data = htmlspecialchars($data);
+	if ($problem && strlen($data) == 0)
+	{
+		show_error($problem);
+	}
+	return $data;
+}
+function show_error($myError) {
+?>
+	<html>
+	<body>
+	<b>Please correct the following test error:</b><br />
+	<?php echo $myError; ?>
+	</body>
+	</html>
+<?php
+exit();
+}
+if (verifyFormToken('form1')) {
+	$myemail = 'js.neeb1780@gmail.com';
+	$name = check_input($_POST['name'], "Enter your name.");
+	$email = check_input($_POST['email']);
+	$comments = check_input($_POST['message'], "Please include a message.");
+	$subject = "Site Contact";
+	if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
+	{
+	    show_error("E-mail address not valid");
+	}
+	$message = "Name: $name
+	Email: $email
+	Message: $comments";
+	mail($myemail, $subject, $message);
+	header('Location: contact.php');
+	exit();
+} 
+else {
+}
+?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,6 +67,9 @@
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../styleSheets/css/indexStyles.css">
 </head>
+<?php
+$newToken = generateFormToken('form1');
+?>
 <body>
 <div class="contactSect">
 	<div class="container">
@@ -56,8 +119,8 @@
 	<div class="formCont">
 		<div class="form">
 			<p class="error"></p>
-			<form>
-				<!-- <input type="hidden" name="token" value="<?php echo $newToken; ?>"> -->
+			<form action="contact.php" id="form" method="post">
+				<input type="hidden" name="token" value="<?php echo $newToken; ?>">
 				<input class="input" type="text" name="name" placeholder="Name">
 				<input class="input" type="text" name="email" placeholder="Email">
 				<input class="input" type="text" name="subject" placeholder="Subject">
