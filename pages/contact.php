@@ -30,9 +30,19 @@ function check_input($data, $problem='') {
 function show_error($myError) {
 ?>
 	<html>
+	<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Whoops...</title>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400" rel="stylesheet">
+	<link rel="stylesheet" type="text/css" href="../styleSheets/css/indexStyles.css">
+	</head>
 	<body>
-	<b>Please correct the following test error:</b><br />
-	<?php echo $myError; ?>
+	<div class="container">
+		<h1>Hmm...</h1>
+		<p>Looks like you might have <?php echo $myError ?>.</p>
+		<p>No problem. Just go back and try again.</p>
+	</div>
 	</body>
 	</html>
 <?php
@@ -40,13 +50,13 @@ exit();
 }
 if (verifyFormToken('form1')) {
 	$myemail = 'js.neeb1780@gmail.com';
-	$name = check_input($_POST['name'], "Enter your name.");
+	$name = check_input($_POST['name'], "forgotten to tell me your name");
 	$email = check_input($_POST['email']);
-	$comments = check_input($_POST['message'], "Please include a message.");
-	$subject = "Site Contact";
+	$subject = check_input($_POST['subject'], "forgotten to add a subject line");
+	$comments = check_input($_POST['message'], "forgotten to type your message");
 	if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
 	{
-	    show_error("E-mail address not valid");
+	    show_error("given me an invalid email address");
 	}
 	$message = "Name: $name
 	Email: $email
