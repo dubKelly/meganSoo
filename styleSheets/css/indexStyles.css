@@ -632,7 +632,7 @@ a {
 .sentHead {
   text-align: center;
   font-size: 24px;
-  padding: 30px 0; }
+  padding: 0 0 30px 0; }
 
 /* _mainMq */
 @media only screen and (min-width: 550px) {
