@@ -41,8 +41,10 @@ a {
 @import "aboutSect";
 @import "stillsSect";
 @import "motionSect";
-@import "pages/contactSect";
 @import "footer";
+
+@import "pages/contactSect";
 @import "pages/contactFooter";
+@import "pages/messageSentSect";
 
 @import "mediaQueries/mainMq";

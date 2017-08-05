@@ -1,76 +1,3 @@
-<?php
-session_start();
-function generateFormToken($form) {
-	$token = md5(uniqid(microtime(), true));
-	$_SESSION[$form.'_token'] = $token;
-	return $token;
-}
-function verifyFormToken($form) {
-	if (!isset($_SESSION[$form.'_token'])) {
-		return false;
-	}
-	if (!isset($_POST['token'])) {
-		return false;
-	}
-	if ($_SESSION[$form.'_token'] !== $_POST['token']) {
-		return false;
-	}
-	return true;
-}
-function check_input($data, $problem='') {
-	$data = trim($data);
-	$data = stripslashes($data);
-	$data = htmlspecialchars($data);
-	if ($problem && strlen($data) == 0)
-	{
-		show_error($problem);
-	}
-	return $data;
-}
-function show_error($myError) {
-?>
-	<html>
-	<head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>Whoops...</title>
-	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400" rel="stylesheet">
-	<link rel="stylesheet" type="text/css" href="../styleSheets/css/indexStyles.css">
-	</head>
-	<body>
-	<div style="position: relative; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
-		<h1 style="font-size: 24px; text-align: center; padding: 30px 0;">Whoops...</h1>
-		<p>Looks like you might have <?php echo $myError ?>.</p>
-		<p>No problem. Just go back and check it out.</p>
-	</div>
-	</body>
-	</html>
-<?php
-exit();
-}
-if (verifyFormToken('form1')) {
-	$myemail = 'js.neeb1780@gmail.com';
-	$name = check_input($_POST['name'], "forgotten to tell me your name");
-	$email = check_input($_POST['email']);
-	$subject = check_input($_POST['subject'], "forgotten to add a subject line");
-	$comments = check_input($_POST['message'], "forgotten to type your message");
-	if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
-	{
-	    show_error("given me an invalid email address");
-	}
-	$message = "$comments
-	
-
-
-$name
-$email";
-	mail($myemail, $subject, $message);
-	header('Location: messageSent.html');
-	exit();
-} 
-else {
-}
-?>
 <!DOCTYPE html>
 <html>
 <head>
@@ -80,9 +7,6 @@ else {
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../styleSheets/css/indexStyles.css">
 </head>
-<?php
-$newToken = generateFormToken('form1');
-?>
 <body>
 <div class="contactSect">
 	<div class="container">
@@ -132,8 +56,8 @@ $newToken = generateFormToken('form1');
 	<div class="formCont">
 		<div class="form">
 			<p class="error"></p>
-			<form action="contact.php" id="form" method="post">
-				<input type="hidden" name="token" value="<?php echo $newToken; ?>">
+			<form>
+				<!-- <input type="hidden" name="token" value="<?php echo $newToken; ?>"> -->
 				<input class="input" type="text" name="name" placeholder="Name">
 				<input class="input" type="text" name="email" placeholder="Email">
 				<input class="input" type="text" name="subject" placeholder="Subject">
