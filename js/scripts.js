@@ -1,3 +1,8 @@
+(function yesJS() {
+  var noJS = document.getElementsByClassName("noJS")[0];
+  noJS.classList.remove("noJS");
+})();
+
 (function burgerMenu() {
 	var burger = document.getElementById("burger");
 	var toggle = document.getElementsByClassName("toggle");

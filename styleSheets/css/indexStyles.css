@@ -183,25 +183,19 @@ a {
 .burger span:nth-child(4) {
   top: 24px; }
 
-.burger span:nth-child(1).open {
+.burger span:nth-child(1).open, .burger span:nth-child(4).open, .noJS:hover div span:nth-child(1), .noJS:hover div span:nth-child(4) {
   top: 12px;
   width: 0px;
   -webkit-transform: translateX(18px);
   transform: translateX(18px); }
 
-.burger span:nth-child(2).open {
+.burger span:nth-child(2).open, .noJS:hover div span:nth-child(2) {
   -webkit-transform: rotate(45deg);
   transform: rotate(45deg); }
 
-.burger span:nth-child(3).open {
+.burger span:nth-child(3).open, .noJS:hover div span:nth-child(3) {
   -webkit-transform: rotate(-45deg);
   transform: rotate(-45deg); }
-
-.burger span:nth-child(4).open {
-  top: 12px;
-  width: 0px;
-  -webkit-transform: translateX(18px);
-  transform: translateX(18px); }
 
 .head, .portCont {
   position: absolute;
@@ -215,7 +209,7 @@ a {
 .head {
   z-index: 1; }
 
-.head.open {
+.head.open, .noJS:hover ~ .head {
   z-index: 0; }
 
 .headCont {
@@ -226,14 +220,14 @@ a {
   overflow: hidden;
   transition: all 0.5s 0.2s ease-in-out; }
 
-.headCont.open {
+.headCont.open, .noJS:hover ~ .head div.headCont {
   transition: all 0.5s ease-in-out; }
 
 .fNameCont {
   -webkit-transform: translate(-104px, -120%) skew(-30deg);
   transform: translate(-104px, -120%) skew(-30deg); }
 
-.fNameCont.open {
+.fNameCont.open, .noJS:hover ~ .head div.fNameCont {
   left: calc(15% - 136px);
   -webkit-transform: translate(0, -120%) skew(0deg);
   transform: translate(0, -120%) skew(0deg); }
@@ -242,7 +236,7 @@ a {
   -webkit-transform: translate(20px, 20%) skew(-30deg);
   transform: translate(20px, 20%) skew(-30deg); }
 
-.lNameCont.open {
+.lNameCont.open, .noJS:hover ~ .head div.lNameCont {
   left: 15%;
   -webkit-transform: skew(0deg);
   transform: skew(0deg); }
@@ -281,7 +275,7 @@ a {
   -o-animation: fNameLoad 2.8s ease-out;
   animation: fNameLoad 2.8s ease-out; }
 
-.fName.open {
+.fName.open, .noJS:hover ~ .head div.fNameCont span.fName {
   -webkit-transform: translate(110%, 0) skew(0deg);
   transform: translate(110%, 0) skew(0deg);
   transition: all 0.5s ease-in-out; }
@@ -295,12 +289,12 @@ a {
   -o-animation: lNameLoad 2.8s ease-out;
   animation: lNameLoad 2.8s ease-out; }
 
-.lName.open {
+.lName.open, .noJS:hover ~ .head div.lNameCont span.lName {
   -webkit-transform: translate(-110%, 0) skew(0deg);
   transform: translate(-110%, 0) skew(0deg);
   transition: all 0.5s ease-in-out; }
 
-.stills.open {
+.stills.open, .noJS:hover ~ .portCont div.stillsCont a span.stills {
   -webkit-transform: translate(0, 0) skew(0deg);
   transform: translate(0, 0) skew(0deg); }
 
@@ -319,7 +313,7 @@ a {
   -o-animation: partLoad 2.5s ease-in-out;
   animation: partLoad 2.5s ease-in-out; }
 
-.part.open {
+.part.open, .noJS:hover ~ .head span.part {
   left: 15%;
   height: 120px;
   -webkit-transform: translate(-50%, -50%) rotate(0deg);
@@ -330,7 +324,7 @@ a {
   cursor: pointer;
   color: rgba(250, 250, 250, 0); }
 
-.portHead.open {
+.portHead.open, .noJS:hover ~ .portCont div.headCont a span.portHead {
   color: #fafafa;
   transition: all 0.5s 0.2s ease-in-out; }
 
