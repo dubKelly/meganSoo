@@ -5,6 +5,8 @@
 .messageSentSect {
 	position: relative;
 	height: calc(100% - 176px);
+	min-height: 300px;
+	padding: 0 20px;
 }
 .sentCont {
 	position: relative;

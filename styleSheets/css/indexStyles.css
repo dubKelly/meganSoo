@@ -613,14 +613,24 @@ a {
   cursor: pointer; }
 
 /* _contactFooter */
-.footArrow.contactFootArrow {
-  -webkit-transform: rotate(-90deg);
-  transform: rotate(-90deg); }
+.homeCont {
+  position: relative;
+  text-align: center; }
+
+.home {
+  height: 40px;
+  width: 40px;
+  padding: 25px 10px 10px 10px; }
+
+.home path {
+  fill: #b8b8b8; }
 
 /* _messageSentSect */
 .messageSentSect {
   position: relative;
-  height: calc(100% - 176px); }
+  height: calc(100% - 176px);
+  min-height: 300px;
+  padding: 0 20px; }
 
 .sentCont {
   position: relative;
