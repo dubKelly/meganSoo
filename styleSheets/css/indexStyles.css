@@ -653,7 +653,7 @@ a {
   transform: translate(-50%, -50%);
   z-index: 1; }
 
-.sentCont.open {
+.sentCont.open, #burgerNoJS:checked ~ .sentCont {
   z-index: 0; }
 
 .sentHead {
@@ -664,17 +664,36 @@ a {
 .sent {
   transition: all 0.5s 0.2s ease-in-out; }
 
-.sent.open {
+.sent.open, #burgerNoJS:checked ~ .sentCont .sent {
   transition: all 0.2s ease-in-out;
   color: transparent; }
 
-/* _landingSect.scss */
+.about.mS, .stills.mS {
+  -webkit-transform: translate(0, 0) skew(0deg);
+  transform: translate(0, 0) skew(0deg); }
+
+.motionCont.mS, .motionCont.mS.open, #burgerNoJS:checked ~ .portCont div.motionCont.mS {
+  -webkit-transform: translate(-50%, -386%);
+  transform: translate(-50%, -386%); }
+
+.aboutCont.mS, .aboutCont.mS.open, #burgerNoJS:checked ~ .portCont div.aboutCont.mS {
+  -webkit-transform: translate(-50%, 66%);
+  transform: translate(-50%, 66%); }
+
+.stillsCont.mS, .stillsCont.mS.open, #burgerNoJS:checked ~ .portCont div.stillsCont.mS {
+  -webkit-transform: translate(-50%, -166%) skew(0deg);
+  transform: translate(-50%, -166%) skew(0deg); }
+
+.contactCont.mS, .contactCont.mS.open, #burgerNoJS:checked ~ .portCont div.contactCont.mS {
+  -webkit-transform: translate(-50%, 286%);
+  transform: translate(-50%, 286%); }
+
 .portHead.mS {
   font-weight: 400;
   color: transparent;
   z-index: 0; }
 
-.portHead.mS.open {
+.portHead.mS.open, #burgerNoJS:checked ~ .portCont div.headCont a span.portHead.mS {
   color: black;
   z-index: 1; }
 
