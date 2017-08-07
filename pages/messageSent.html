@@ -6,12 +6,35 @@
 	<title>Megan Soo | Contact</title>
 	<link href="https://fonts.googleapis.com/css?family=Raleway:100,200,400" rel="stylesheet">
 	<link rel="stylesheet" type="text/css" href="../styleSheets/css/indexStyles.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 </head>
 <body>
 <div class="messageSentSect">
-	<div class="sentCont">
-		<h1 class="sentHead">Message Sent!</h1>
-		<p>Thanks for reaching out. I'll get back to you as soon as possible.</p>
+	<div class="container noJS">
+		<div id="burger" class="burger mS">
+			<span class="toggle"></span>
+			<span class="toggle"></span>
+			<span class="toggle"></span>
+			<span class="toggle"></span>
+		</div>
+	</div>
+	<div class="sentCont toggle">
+		<h1 class="sentHead sent toggle">Message Sent!</h1>
+		<p class="sent toggle">Thanks for reaching out. I'll get back to you as soon as possible.</p>
+	</div>
+	<div class="portCont">
+		<div class="headCont motionCont toggle">
+			<a href="../index.html#motion"><span class="landingHead portHead mS motion toggle">Motion</span></a>
+		</div>
+		<div class="headCont stillsCont toggle">
+			<a href="../index.html#stills"><span class="landingHead portHead mS stills toggle">Stills</span></a>
+		</div>
+		<div class="headCont aboutCont toggle">
+			<a href="../index.html#about"><span class="landingHead portHead mS about toggle">About</span></a>
+		</div>
+		<div class="headCont contactCont toggle">
+			<a href="contact.php"><span class="landingHead portHead mS contact toggle">Contact</span></a>
+		</div>
 	</div>
 </div>
 <div class="footer">
@@ -62,6 +85,6 @@
 	</div>
 	<p class="copyright">&#169 2017 Megan Soo</p>
 </div>
-<script type="text/javascript" src="../js/contact.js"></script>
+<script type="text/javascript" src="../js/messageSent.js"></script>
 </body>
 </html>

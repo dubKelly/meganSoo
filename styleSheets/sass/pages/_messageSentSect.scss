@@ -8,14 +8,42 @@
 	min-height: 300px;
 	padding: 0 20px;
 }
+.burger.mS span {
+	background-color: black;
+	animation: none;
+}
 .sentCont {
 	position: relative;
+	padding: 30px 0;
 	top: 50%;
 	left: 50%;
 	@include transform(translate(-50%, -50%));
+	z-index: 1;
+}
+.sentCont.open {
+	z-index: 0;
 }
 .sentHead {
 	text-align: center;
 	font-size: 24px;
 	padding: 0 0 30px 0;
+}
+.sent {
+	transition: all 0.5s 0.2s ease-in-out;
+}
+.sent.open {
+	transition: all 0.2s ease-in-out;
+	color: rgba(0, 0, 0, 0);
+}
+.portHead.mS {
+	font-weight: 400;
+	color: rgba(0, 0, 0, 0);
+	z-index: 0;
+}
+.portHead.mS.open {
+	color: rgba(0, 0, 0, 1);
+	z-index: 1;
+}
+.portHead.mS.fade {
+	color: #b8b8b8;
 }
