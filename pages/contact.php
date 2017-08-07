@@ -192,10 +192,10 @@ $newToken = generateFormToken('form1');
 	</div>
 	<span class="footPart right"></span>
 	<div class="footNavCont">
-		<a href="#motion"><span class="footNav footMotion">Motion</span></a>
-		<a href="#stills"><span class="footNav footStills">Stills</span></a>
-		<a href="#about"><span class="footNav footAbout">About</span></a>
-		<a href="pages/contact.php"><span class="footNav footContact">Contact</span></a>
+		<a href="../index.html#landing"><span class="footNav footContact">Home</span></a>
+		<a href="../index.html#motion"><span class="footNav footMotion">Motion</span></a>
+		<a href="../index.html#stills"><span class="footNav footStills">Stills</span></a>
+		<a href="../index.html#about"><span class="footNav footAbout">About</span></a>
 	</div>
 	<p class="copyright">&#169 2017 Megan Soo</p>
 </div>
