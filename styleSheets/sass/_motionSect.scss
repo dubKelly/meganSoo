@@ -5,8 +5,10 @@
 .motionSect {
 	position: relative;
 	height: calc(66% + 138px);
+	min-height: 320px;
 	width: 100%;
 	background-color: rgba(199, 0, 57, 1);
+	/*padding: 0 0 30px 0;*/
 }
 .motionHeadBefore {
 	background-color: black;
@@ -17,8 +19,10 @@
 }
 .videoCont {
 	position: relative;
-	height: calc(100% - 138px);
-	min-height: 320px;
+	/*top: 138px;*/
+	height: calc(100% - 143px);
+	width: calc(100% - 10px);
+	margin: 0 5px 5px 5px;
 	@include background-image("../../images/Megan Soo - triplex.jpg");
 }
 .videoCont iframe {

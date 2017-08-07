@@ -57,6 +57,9 @@ p {
 a {
   text-decoration: none; }
 
+iframe {
+  display: none; }
+
 .container {
   position: relative; }
 
@@ -434,8 +437,10 @@ a {
 .motionSect {
   position: relative;
   height: calc(66% + 138px);
+  min-height: 320px;
   width: 100%;
-  background-color: #c70039; }
+  background-color: #c70039;
+  /*padding: 0 0 30px 0;*/ }
 
 .motionHeadBefore {
   background-color: black;
@@ -447,8 +452,10 @@ a {
 
 .videoCont {
   position: relative;
-  height: calc(100% - 138px);
-  min-height: 320px;
+  /*top: 138px;*/
+  height: calc(100% - 143px);
+  width: calc(100% - 10px);
+  margin: 0 5px 5px 5px;
   background-image: url("../../images/Megan Soo - triplex.jpg");
   background-position: center;
   background-size: cover;
@@ -489,7 +496,7 @@ a {
 /* _footer */
 .footer {
   position: relative;
-  /*height: 180px;*/
+  height: 176px;
   background-color: #212121; }
 
 .footArrowCont {
