@@ -57,9 +57,6 @@ p {
 a {
   text-decoration: none; }
 
-iframe {
-  display: none; }
-
 .container {
   position: relative; }
 
@@ -456,7 +453,7 @@ iframe {
   height: calc(100% - 143px);
   width: calc(100% - 10px);
   margin: 0 5px 5px 5px;
-  background-image: url("../../images/Megan Soo - triplex.jpg");
+  background-image: url("../../images/screenshot2.jpg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat; }
