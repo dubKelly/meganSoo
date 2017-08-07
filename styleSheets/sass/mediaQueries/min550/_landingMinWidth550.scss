@@ -3,56 +3,54 @@
 .headCont {
 	transition: all 0.5s 0.2s ease-in-out;
 }
-.headCont.open {
+.headCont.open, #burgerNoJS:checked ~ .head div.headCont, #burgerNoJS:checked ~ .portCont div.headCont {
 	left: 50%;
 	transition: all 0.5s ease-in-out;
 }
-.fNameCont.open {
-	/*left: 50%;*/
+.fNameCont.open, #burgerNoJS:checked ~ .head div.fNameCont {
 	@include transform(translate(-137px, -120%) skew(0deg));
 }
-.lNameCont.open {
-	/*left: 50%;*/
+.lNameCont.open, #burgerNoJS:checked ~ .head div.lNameCont {
 	@include transform(translate(0, 20%) skew(0deg));
 }
 .motionCont {
 	@include transform(translate(-153px, -70%) rotateX(90deg));
 	transition: all 0.5s ease-in-out;
 }
-.motionCont.open {
+.motionCont.open, #burgerNoJS:checked ~ .portCont div.motionCont {
 	@include transform(translate(-154px, -120%) rotateX(0deg));
 	transition: all 0.5s 0.2s ease-in-out;
 }
 .aboutCont {
 	@include transform(translate(-116px, 20%) skew(-30deg));
 }
-.aboutCont.open {
+.aboutCont.open, #burgerNoJS:checked ~ .portCont div.aboutCont {
 	@include transform(translate(-133px, 20%) skew(0deg));
 }
 .stillsCont {
 	@include transform(translate(34px, -120%) skew(-30deg));
 }
-.stillsCont.open {
+.stillsCont.open, #burgerNoJS:checked ~ .portCont div.stillsCont {
 	@include transform(translate(0, -120%) skew(0deg));
 }
 .contactCont {
 	@include transform(translate(0, -30%) rotateX(90deg));
 	transition: all 0.5s ease-in-out;
 }
-.contactCont.open {
+.contactCont.open, #burgerNoJS:checked ~ .portCont div.contactCont {
 	@include transform(translate(0, 20%) rotateX(0deg));
 	transition: all 0.5s 0.2s ease-in-out;
 }
 .landingHead {
 	transition: all 0.5s 0.2s ease-in-out;
 }
-.landingHead.open {
+.landingHead.open, #burgerNoJS:checked ~ .head div.headCont span.landingHead, #burgerNoJS:checked ~ .portCont div.headCont a span.landingHead {
 	transition: all 0.5s ease-in-out;
 }
 .about {
 	@include transform(translate(110%, 0) skew(30deg));
 }
-.about.open {
+.about.open, #burgerNoJS:checked ~ .portCont div.aboutCont a span.about {
 	@include transform(translate(0, 0) skew(0deg));
 }
 .stills {
@@ -61,7 +59,7 @@
 .part {
 	transition: all 0.5s 0.2s ease-in-out;
 }
-.part.open {
+.part.open, #burgerNoJS:checked ~ .head span.part {
 	left: 50%;
 	height: 80px;
 }

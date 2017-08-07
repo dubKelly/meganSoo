@@ -96,16 +96,16 @@
 	@include transform(skew(0deg));
 }
 .motionCont {
-	@include transform(translate(-50%, -390%));
+	@include transform(translate(-50%, -386%));
 }
 .aboutCont {
-	@include transform(translate(-50%, 70%));
+	@include transform(translate(-50%, 66%));
 }
 .stillsCont {
-	@include transform(translate(-50%, -170%));
+	@include transform(translate(-50%, -166%));
 }
 .contactCont {
-	@include transform(translate(-50%, 290%));
+	@include transform(translate(-50%, 286%));
 }
 .landingHead {
 	display: inline-block;

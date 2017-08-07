@@ -248,20 +248,20 @@ a {
   transform: skew(0deg); }
 
 .motionCont {
-  -webkit-transform: translate(-50%, -390%);
-  transform: translate(-50%, -390%); }
+  -webkit-transform: translate(-50%, -386%);
+  transform: translate(-50%, -386%); }
 
 .aboutCont {
-  -webkit-transform: translate(-50%, 70%);
-  transform: translate(-50%, 70%); }
+  -webkit-transform: translate(-50%, 66%);
+  transform: translate(-50%, 66%); }
 
 .stillsCont {
-  -webkit-transform: translate(-50%, -170%);
-  transform: translate(-50%, -170%); }
+  -webkit-transform: translate(-50%, -166%);
+  transform: translate(-50%, -166%); }
 
 .contactCont {
-  -webkit-transform: translate(-50%, 290%);
-  transform: translate(-50%, 290%); }
+  -webkit-transform: translate(-50%, 286%);
+  transform: translate(-50%, 286%); }
 
 .landingHead {
   display: inline-block;
@@ -668,6 +668,7 @@ a {
   transition: all 0.2s ease-in-out;
   color: transparent; }
 
+/* _landingSect.scss */
 .portHead.mS {
   font-weight: 400;
   color: transparent;
@@ -686,17 +687,15 @@ a {
   .headCont {
     transition: all 0.5s 0.2s ease-in-out; }
 
-  .headCont.open {
+  .headCont.open, #burgerNoJS:checked ~ .head div.headCont, #burgerNoJS:checked ~ .portCont div.headCont {
     left: 50%;
     transition: all 0.5s ease-in-out; }
 
-  .fNameCont.open {
-    /*left: 50%;*/
+  .fNameCont.open, #burgerNoJS:checked ~ .head div.fNameCont {
     -webkit-transform: translate(-137px, -120%) skew(0deg);
     transform: translate(-137px, -120%) skew(0deg); }
 
-  .lNameCont.open {
-    /*left: 50%;*/
+  .lNameCont.open, #burgerNoJS:checked ~ .head div.lNameCont {
     -webkit-transform: translate(0, 20%) skew(0deg);
     transform: translate(0, 20%) skew(0deg); }
 
@@ -705,7 +704,7 @@ a {
     transform: translate(-153px, -70%) rotateX(90deg);
     transition: all 0.5s ease-in-out; }
 
-  .motionCont.open {
+  .motionCont.open, #burgerNoJS:checked ~ .portCont div.motionCont {
     -webkit-transform: translate(-154px, -120%) rotateX(0deg);
     transform: translate(-154px, -120%) rotateX(0deg);
     transition: all 0.5s 0.2s ease-in-out; }
@@ -714,7 +713,7 @@ a {
     -webkit-transform: translate(-116px, 20%) skew(-30deg);
     transform: translate(-116px, 20%) skew(-30deg); }
 
-  .aboutCont.open {
+  .aboutCont.open, #burgerNoJS:checked ~ .portCont div.aboutCont {
     -webkit-transform: translate(-133px, 20%) skew(0deg);
     transform: translate(-133px, 20%) skew(0deg); }
 
@@ -722,7 +721,7 @@ a {
     -webkit-transform: translate(34px, -120%) skew(-30deg);
     transform: translate(34px, -120%) skew(-30deg); }
 
-  .stillsCont.open {
+  .stillsCont.open, #burgerNoJS:checked ~ .portCont div.stillsCont {
     -webkit-transform: translate(0, -120%) skew(0deg);
     transform: translate(0, -120%) skew(0deg); }
 
@@ -731,7 +730,7 @@ a {
     transform: translate(0, -30%) rotateX(90deg);
     transition: all 0.5s ease-in-out; }
 
-  .contactCont.open {
+  .contactCont.open, #burgerNoJS:checked ~ .portCont div.contactCont {
     -webkit-transform: translate(0, 20%) rotateX(0deg);
     transform: translate(0, 20%) rotateX(0deg);
     transition: all 0.5s 0.2s ease-in-out; }
@@ -739,14 +738,14 @@ a {
   .landingHead {
     transition: all 0.5s 0.2s ease-in-out; }
 
-  .landingHead.open {
+  .landingHead.open, #burgerNoJS:checked ~ .head div.headCont span.landingHead, #burgerNoJS:checked ~ .portCont div.headCont a span.landingHead {
     transition: all 0.5s ease-in-out; }
 
   .about {
     -webkit-transform: translate(110%, 0) skew(30deg);
     transform: translate(110%, 0) skew(30deg); }
 
-  .about.open {
+  .about.open, #burgerNoJS:checked ~ .portCont div.aboutCont a span.about {
     -webkit-transform: translate(0, 0) skew(0deg);
     transform: translate(0, 0) skew(0deg); }
 
@@ -757,7 +756,7 @@ a {
   .part {
     transition: all 0.5s 0.2s ease-in-out; }
 
-  .part.open {
+  .part.open, #burgerNoJS:checked ~ .head span.part {
     left: 50%;
     height: 80px; }
 
