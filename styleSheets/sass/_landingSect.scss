@@ -13,6 +13,13 @@
 	background-color: rgba(0, 0, 0, 0.5);
 	@include animation(fadeIn 2.5s ease-in-out);
 }
+#burgerNoJS {
+	display: none;
+}
+#burgerNoJS + label {
+	@extend .burger;
+	z-index: 100;
+}
 .burger {
 	cursor: pointer;
 	position: absolute;
@@ -38,15 +45,15 @@
 .burger span:nth-child(4) {
 	top: 24px
 }
-.burger span:nth-child(1).open, .burger span:nth-child(4).open, .noJS:hover div span:nth-child(1), .noJS:hover div span:nth-child(4) {
+.burger span:nth-child(1).open, .burger span:nth-child(4).open, #burgerNoJS:checked ~ div.container div.burger span:nth-child(1), #burgerNoJS:checked ~ div.container div.burger span:nth-child(4) {
 	top: 12px;
 	width: 0px;
 	@include transform(translateX(18px));
 }
-.burger span:nth-child(2).open, .noJS:hover div span:nth-child(2) {
+.burger span:nth-child(2).open, #burgerNoJS:checked ~ div.container div.burger span:nth-child(2) {
 	@include transform(rotate(45deg));
 }
-.burger span:nth-child(3).open, .noJS:hover div span:nth-child(3) {
+.burger span:nth-child(3).open, #burgerNoJS:checked ~ div.container div.burger span:nth-child(3) {
 	@include transform(rotate(-45deg));
 }
 .head, .portCont {
@@ -60,7 +67,7 @@
 .head {
 	z-index: 1;
 }
-.head.open, .noJS:hover ~ .head {
+.head.open, #burgerNoJS:checked ~ .head {
 	z-index: 0;
 }
 .headCont {
@@ -71,20 +78,20 @@
 	overflow: hidden;
 	transition: all 0.5s 0.2s ease-in-out;	
 }
-.headCont.open, .noJS:hover ~ .head div.headCont {
+.headCont.open, #burgerNoJS:checked ~ .head div.headCont {
 	transition: all 0.5s ease-in-out;
 }
 .fNameCont {
 	@include transform(translate(-104px, -120%) skew(-30deg));
 }
-.fNameCont.open, .noJS:hover ~ .head div.fNameCont {
+.fNameCont.open, #burgerNoJS:checked ~ .head div.fNameCont {
 	left: calc(15% - 136px);
 	@include transform(translate(0, -120%) skew(0deg));
 }
 .lNameCont {
 	@include transform(translate(20px, 20%) skew(-30deg));
 }
-.lNameCont.open, .noJS:hover ~ .head div.lNameCont {
+.lNameCont.open, #burgerNoJS:checked ~ .head div.lNameCont {
 	left: 15%;
 	@include transform(skew(0deg));
 }
@@ -114,7 +121,7 @@
 	transition: all 0.5s 0.2s ease-in-out;
 	@include animation(fNameLoad 2.8s ease-out);
 }
-.fName.open, .noJS:hover ~ .head div.fNameCont span.fName {
+.fName.open, #burgerNoJS:checked ~ .head div.fNameCont span.fName {
 	@include transform(translate(110%, 0) skew(0deg));
 	transition: all 0.5s ease-in-out;
 }
@@ -123,11 +130,11 @@
 	transition: all 0.5s 0.2s ease-in-out;
 	@include animation(lNameLoad 2.8s ease-out);
 }
-.lName.open, .noJS:hover ~ .head div.lNameCont span.lName {
+.lName.open, #burgerNoJS:checked ~ .head div.lNameCont span.lName {
 	@include transform(translate(-110%, 0) skew(0deg));
 	transition: all 0.5s ease-in-out;
 }
-.stills.open, .noJS:hover ~ .portCont div.stillsCont a span.stills {
+.stills.open, #burgerNoJS:checked ~ .portCont div.stillsCont a span.stills {
 	@include transform(translate(0, 0) skew(0deg));
 }
 .part {
@@ -141,7 +148,7 @@
 	transition: all 0.5s 0.2s ease-in-out;
 	@include animation(partLoad 2.5s ease-in-out);
 }
-.part.open, .noJS:hover ~ .head span.part {
+.part.open, #burgerNoJS:checked ~ .head span.part {
 	left: 15%;
 	height: 120px;
 	@include transform(translate(-50%, -50%) rotate(0deg));
@@ -151,7 +158,7 @@
 	cursor: pointer;
 	color: rgba(250, 250, 250, 0);
 }
-.portHead.open, .noJS:hover ~ .portCont div.headCont a span.portHead {
+.portHead.open, #burgerNoJS:checked ~ .portCont div.headCont a span.portHead {
 	color: rgba(250, 250, 250, 1);
 	transition: all 0.5s 0.2s ease-in-out;
 }

@@ -13,4 +13,8 @@
 }
 .home path {
 	fill: #b8b8b8;
+	transition: all 0.2s ease-in-out;
+}
+.home:hover path {
+	fill: rgba(199, 0, 57, 1);
 }

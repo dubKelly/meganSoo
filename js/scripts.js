@@ -1,6 +1,8 @@
 (function yesJS() {
-  var noJS = document.getElementsByClassName("noJS")[0];
-  noJS.classList.remove("noJS");
+  var noJS = document.getElementsByClassName("noJS");
+  for (var i = noJS.length - 1; i >= 0; i--) {
+    noJS[i].style.display = "none";
+  }
 })();
 
 (function burgerMenu() {
