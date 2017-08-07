@@ -1,0 +1,61 @@
+/* footerMinWidth1060 */
+
+@import "../../mixins";
+
+.footer {
+	height: 176px;
+}
+.footArrowCont {
+	position: absolute;
+	width: 60px;
+	top: 50%;
+	left: 50%;
+	@include transform(translate(-50%, -50%));
+	padding: 0;
+}
+.footIcons {
+	position: absolute;
+	width: 260px;
+	top: 50%;
+	right: calc(66% + 60px);
+	@include transform(translateY(-50%));
+}
+.footNavCont {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: calc(66% + 60px);
+	@include transform(translateY(-50%));
+}
+.footNav {
+	display: block;
+	text-align: left;
+	color: #b8b8b8;
+	font-size: 18px;
+	padding: 5px;
+	letter-spacing: 3px;
+	transition: all 0.2s ease-in-out;
+}
+.footNav:hover {
+	color: rgba(199, 0, 57, 1);
+}
+.footPart {
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	@include transform(translateY(-50%));
+	height: 120px;
+	width: 1px;
+	background-color: rgba(199, 0, 57, 0.3);
+}
+.footPart.left {
+	left: 33%;
+}
+.footPart.right {
+	right: 33%;
+}
+.copyright {
+	position: absolute;
+	width: 100%;
+	bottom: 0;
+}
