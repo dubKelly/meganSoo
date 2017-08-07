@@ -40,8 +40,8 @@ function show_error($myError) {
 	<body>
 	<div style="position: relative; top: 50%; left: 50%; -webkit-transform: translate(-50%, -50%); transform: translate(-50%, -50%);">
 		<h1 style="font-size: 24px; text-align: center; padding: 30px 0;">Whoops...</h1>
-		<p>Looks like you might have <?php echo $myError ?>.</p>
-		<p>No problem. Just go back and check it out.</p>
+		<p>Looks like you <?php echo $myError ?>.</p>
+		<p>No worries. Just go back and double check.</p>
 	</div>
 	</body>
 	</html>
@@ -50,13 +50,13 @@ exit();
 }
 if (verifyFormToken('form1')) {
 	$myemail = 'js.neeb1780@gmail.com';
-	$name = check_input($_POST['name'], "forgotten to tell me your name");
+	$name = check_input($_POST['name'], "forgot to tell me your name");
 	$email = check_input($_POST['email']);
-	$subject = check_input($_POST['subject'], "forgotten to add a subject line");
-	$comments = check_input($_POST['message'], "forgotten to type your message");
+	$subject = check_input($_POST['subject'], "forgot to add a subject line");
+	$comments = check_input($_POST['message'], "forgot to type your message");
 	if (!preg_match("/([\w\-]+\@[\w\-]+\.[\w\-]+)/", $email))
 	{
-	    show_error("given me an invalid email address");
+	    show_error("gave me an invalid email address");
 	}
 	$message = "$comments
 	
