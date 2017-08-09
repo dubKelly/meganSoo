@@ -29,7 +29,12 @@ function check_input($data, $problem='') {
 }
 function show_error($myError) {
 ?>
-
+	<html>
+	<body>
+	<b>Please correct the following test error:</b><br />
+	<?php echo $myError; ?>
+	</body>
+	</html>
 <?php
 exit();
 }
@@ -118,6 +123,10 @@ else {
 		textarea {
 			width: 100%;
 		}
+		.submit {
+			margin: 20px 0;
+			display: block;
+		}
 	</style>
 </head>
 <?php
@@ -125,7 +134,7 @@ $newToken = generateFormToken('form1');
 ?>
 <body>
 <p>Hi, Megan. Hope you've been having a great day.<br>Remember that I really like coding and my feelings can't be hurt so don't be afraid to submit any changes you'd like done to the site.</p>
-<form>
+<form action="update.php" id="form" method="post">
 	<input type="hidden" name="token" value="<?php echo $newToken; ?>">
 	<textarea name="message" rows="20" placeholder="Updates"></textarea>
 	<h2>Images</h2>
@@ -211,7 +220,7 @@ $newToken = generateFormToken('form1');
 		<input type="text" name="img16c" placeholder="category">
 		<input type="text" name="img16p" placeholder="position">
 	</div>
-	<input type="submit" name="submit" value="submit">
+	<input class="submit" type="submit" name="submit" value="submit">
 </form>
 </body>
 </html>
