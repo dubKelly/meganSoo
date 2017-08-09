@@ -211,6 +211,7 @@ $newToken = generateFormToken('form1');
 		<input type="text" name="img16c" placeholder="category">
 		<input type="text" name="img16p" placeholder="position">
 	</div>
+	<input type="submit" name="submit" value="submit">
 </form>
 </body>
 </html>
