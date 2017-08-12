@@ -7,6 +7,9 @@ html, body {
 	height: 100%;
 	font-family: "Raleway", sans-serif;
 }
+::-webkit-scrollbar {
+   width: 0px;
+}
 p {
 	line-height: 1.5;
 	text-align: center;
