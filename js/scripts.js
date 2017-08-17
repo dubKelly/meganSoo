@@ -134,7 +134,7 @@
     if (!clicked) {
       clicked = true;
       var iFrame = document.createElement("iframe");
-      iFrame.setAttribute("src", "https://www.youtube.com/embed/ZH8YjUJHyS0?autoplay=1");
+      iFrame.setAttribute("src", "https://www.youtube.com/embed/zZLz1auaMaY?autoplay=1");
       iFrame.setAttribute("allowfullscreen", "");
       video.appendChild(iFrame);
     }
