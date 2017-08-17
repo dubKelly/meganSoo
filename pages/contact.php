@@ -49,7 +49,7 @@ function show_error($myError) {
 exit();
 }
 if (verifyFormToken('form1')) {
-	$myemail = 'js.neeb1780@gmail.com';
+	$myemail = 'megansoo08@gmail.com';
 	$name = check_input($_POST['name'], "forgot to tell me your name");
 	$email = check_input($_POST['email']);
 	$subject = check_input($_POST['subject'], "forgot to add a subject line");
